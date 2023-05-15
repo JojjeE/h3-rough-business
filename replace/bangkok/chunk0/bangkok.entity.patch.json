@@ -1,1 +1,21 @@
-{"tempHash":"00097AA87B144150","tbluHash":"00E738E7CF7A35E1","patch":[{"SubEntityOperation":["544dda7e8bb53e1f",{"SetFactory":"0025A2F92318B750"}]},{"SubEntityOperation":["544dda7e8bb53e1f",{"SetBlueprint":"00C655A5738F16F1"}]},{"SubEntityOperation":["48caebf3d8946e7e",{"SetPropertyValue":{"property_name":"m_eSoundFootwearType","value":"EFWT_LEATHER"}}]},{"SubEntityOperation":["48caebf3d8946e7e",{"SetPropertyValue":{"property_name":"m_eOutfitAICategory","value":"OAC_47COLORADO"}}]}],"patchVersion":6}
+{
+	"tempHash": "00097AA87B144150",
+	"tbluHash": "00E738E7CF7A35E1",
+	"patch": [
+		{ "SubEntityOperation": ["544dda7e8bb53e1f", { "SetFactory": "0025A2F92318B750" }] },
+		{ "SubEntityOperation": ["544dda7e8bb53e1f", { "SetBlueprint": "00C655A5738F16F1" }] },
+		{
+			"SubEntityOperation": [
+				"48caebf3d8946e7e",
+				{ "SetPropertyValue": { "property_name": "m_eSoundFootwearType", "value": "EFWT_LEATHER" } }
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"48caebf3d8946e7e",
+				{ "SetPropertyValue": { "property_name": "m_eOutfitAICategory", "value": "OAC_47COLORADO" } }
+			]
+		}
+	],
+	"patchVersion": 6
+}

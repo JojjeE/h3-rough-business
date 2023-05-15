@@ -4,9 +4,9 @@
 	"name": "The Rough Business Suit",
 	"description": "Black leather jacket outfit, for the stylish, rough and tumble assassin. Install it for Peacock or replace a casual suit of your choice.",
 	"authors": ["Jojje"],
-	"frameworkVersion": "2.25.0",
-	"version": "1.1.1",
-	"updateCheck": "https://github.dioden.nu/updateChecks/roughbusiness.json",
+	"frameworkVersion": "2.25.1",
+	"version": "1.2.0",
+	"updateCheck": "https://github.com/JojjeE/h3-rough-business/releases/latest/download/updates.json",
 	"contentFolders": ["base"],
 	"dependencies": ["0016FC9F6C57EFA8"],
 	"options": [
@@ -16,12 +16,8 @@
 			"type": "select",
 			"tooltip": "Install the suit to your game as an addon without replacing existing suits. This will only work if you're playing with Peacock.",
 			"enabledByDefault": true,
-			"contentFolders": [
-				"replace/addon"
-			],
-			"blobsFolders": [
-				"blobs/addon"
-			],
+			"contentFolders": ["replace/addon"],
+			"blobsFolders": ["blobs/addon"],
 			"localisedLines": {
 				"00650E7276B62453": "UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC",
 				"000F07B183063228": "UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME"
@@ -57,12 +53,8 @@
 			"group": "Replace",
 			"name": "Casual Suit with Gloves",
 			"type": "select",
-			"contentFolders": [
-				"replace/bangkok"
-			],
-			"blobsFolders": [
-				"blobs/bangkok"
-			],
+			"contentFolders": ["replace/bangkok"],
+			"blobsFolders": ["blobs/bangkok"],
 			"localisationOverrides": {
 				"00985A1100E5EDDC": {
 					"english": {
@@ -96,12 +88,8 @@
 			"group": "Replace",
 			"name": "Italian Suit with Gloves",
 			"type": "select",
-			"contentFolders": [
-				"replace/sapienza"
-			],
-			"blobsFolders": [
-				"blobs/sapienza"
-			],
+			"contentFolders": ["replace/sapienza"],
+			"blobsFolders": ["blobs/sapienza"],
 			"localisationOverrides": {
 				"00985A1100E5EDDC": {
 					"english": {
@@ -135,12 +123,8 @@
 			"group": "Replace",
 			"name": "Florida Fit with Gloves",
 			"type": "select",
-			"contentFolders": [
-				"replace/miami"
-			],
-			"blobsFolders": [
-				"blobs/miami"
-			],
+			"contentFolders": ["replace/miami"],
+			"blobsFolders": ["blobs/miami"],
 			"localisationOverrides": {
 				"009F430D046716BE": {
 					"english": {
@@ -174,12 +158,8 @@
 			"group": "Replace",
 			"name": "Casual Tourist with Gloves",
 			"type": "select",
-			"contentFolders": [
-				"replace/sanfortuna"
-			],
-			"blobsFolders": [
-				"blobs/sanfortuna"
-			],
+			"contentFolders": ["replace/sanfortuna"],
+			"blobsFolders": ["blobs/sanfortuna"],
 			"localisationOverrides": {
 				"009F430D046716BE": {
 					"english": {
@@ -213,12 +193,8 @@
 			"group": "Replace",
 			"name": "Summer Suave Suit",
 			"type": "select",
-			"contentFolders": [
-				"replace/summersuave"
-			],
-			"blobsFolders": [
-				"blobs/summersuave"
-			],
+			"contentFolders": ["replace/summersuave"],
+			"blobsFolders": ["blobs/summersuave"],
 			"localisationOverrides": {
 				"009F430D046716BE": {
 					"english": {
@@ -252,12 +228,8 @@
 			"group": "Replace",
 			"name": "Summer Sightseeing Suit",
 			"type": "select",
-			"contentFolders": [
-				"replace/summersightseeing"
-			],
-			"blobsFolders": [
-				"blobs/summersightseeing"
-			],
+			"contentFolders": ["replace/summersightseeing"],
+			"blobsFolders": ["blobs/summersightseeing"],
 			"localisationOverrides": {
 				"004B8C5124A49543": {
 					"english": {
@@ -291,12 +263,8 @@
 			"group": "Replace",
 			"name": "Casual Undercover",
 			"type": "select",
-			"contentFolders": [
-				"replace/casualundercover"
-			],
-			"blobsFolders": [
-				"blobs/casualundercover"
-			],
+			"contentFolders": ["replace/casualundercover"],
+			"blobsFolders": ["blobs/casualundercover"],
 			"localisationOverrides": {
 				"009F430D046716BE": {
 					"english": {
@@ -330,12 +298,8 @@
 			"group": "Replace",
 			"name": "Midnight Black Suit",
 			"type": "select",
-			"contentFolders": [
-				"replace/midnightblack"
-			],
-			"blobsFolders": [
-				"blobs/midnightblack"
-			],
+			"contentFolders": ["replace/midnightblack"],
+			"blobsFolders": ["blobs/midnightblack"],
 			"localisationOverrides": {
 				"009F430D046716BE": {
 					"english": {
@@ -369,12 +333,8 @@
 			"group": "Replace",
 			"name": "Summer Suit with Gloves",
 			"type": "select",
-			"contentFolders": [
-				"replace/marrakesh"
-			],
-			"blobsFolders": [
-				"blobs/marrakesh"
-			],
+			"contentFolders": ["replace/marrakesh"],
+			"blobsFolders": ["blobs/marrakesh"],
 			"localisationOverrides": {
 				"00985A1100E5EDDC": {
 					"english": {
@@ -408,12 +368,8 @@
 			"group": "Replace",
 			"name": "Tropical Suit",
 			"type": "select",
-			"contentFolders": [
-				"replace/tropicalsuit"
-			],
-			"blobsFolders": [
-				"blobs/tropicalsuit"
-			],
+			"contentFolders": ["replace/tropicalsuit"],
+			"blobsFolders": ["blobs/tropicalsuit"],
 			"localisationOverrides": {
 				"009F430D046716BE": {
 					"english": {
@@ -447,12 +403,8 @@
 			"group": "Replace",
 			"name": "Smart Casual Suit",
 			"type": "select",
-			"contentFolders": [
-				"replace/smartcasual"
-			],
-			"blobsFolders": [
-				"blobs/smartcasual"
-			],
+			"contentFolders": ["replace/smartcasual"],
+			"blobsFolders": ["blobs/smartcasual"],
 			"localisationOverrides": {
 				"009F430D046716BE": {
 					"english": {
@@ -486,12 +438,8 @@
 			"group": "Replace",
 			"name": "The Raver",
 			"type": "select",
-			"contentFolders": [
-				"replace/raver"
-			],
-			"blobsFolders": [
-				"blobs/raver"
-			],
+			"contentFolders": ["replace/raver"],
+			"blobsFolders": ["blobs/raver"],
 			"localisationOverrides": {
 				"004B8C5124A49543": {
 					"english": {
@@ -525,37 +473,33 @@
 			"group": "Replace",
 			"name": "Lucky Ducky",
 			"type": "select",
-			"contentFolders": [
-				"replace/luckyducky"
-			],
-			"blobsFolders": [
-				"blobs/luckyducky"
-			],
+			"contentFolders": ["replace/luckyducky"],
+			"blobsFolders": ["blobs/luckyducky"],
 			"localisationOverrides": {
 				"004B8C5124A49543": {
 					"english": {
-						"2760943898": "Rough Business",
-						"2681050670": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue."
+						"2681050670": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue.",
+						"2760943898": "Rough Business"
 					},
 					"french": {
-						"2760943898": "Les affaires difficiles",
-						"2681050670": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème."
+						"2681050670": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème.",
+						"2760943898": "Les affaires difficiles"
 					},
 					"italian": {
-						"2760943898": "Affari difficili",
-						"2681050670": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro."
+						"2681050670": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro.",
+						"2760943898": "Affari difficili"
 					},
 					"german": {
-						"2760943898": "Raues Geschäft",
-						"2681050670": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann."
+						"2681050670": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann.",
+						"2760943898": "Raues Geschäft"
 					},
 					"spanish": {
-						"2760943898": "Negocios Difíciles",
-						"2681050670": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas."
+						"2681050670": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas.",
+						"2760943898": "Negocios Difíciles"
 					},
 					"russian": {
-						"2760943898": "Грубый бизнес",
-						"2681050670": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем."
+						"2681050670": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем.",
+						"2760943898": "Грубый бизнес"
 					}
 				}
 			}

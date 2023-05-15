@@ -1,1 +1,119 @@
-{"tempHash":"00097AA87B144150","tbluHash":"00E738E7CF7A35E1","patch":[{"AddEntity":["feed9f8b225ed59b",{"parent":"ba8ea9278df2079","name":"CHAR_Global_Hero_Rough_Business_M","factory":"[modules:/zglobaloutfitkit.class].pc_entitytype","blueprint":"[modules:/zglobaloutfitkit.class].pc_entityblueprint","properties":{"m_eActorType":{"type":"EActorType","value":"eAT_Hitman"},"m_eSoundFootwearType":{"type":"EHM5SoundFootwearType","value":"EFWT_LEATHER"},"m_sId":{"type":"ZGuid","value":"84a7b170-3b20-4b45-900e-1e44e35cf0c3"},"m_bCanCallForHelp":{"type":"bool","value":true},"m_sCommonName":{"type":"ZString","value":"CHAR_Global_Hero_Rough_Business_M"},"m_sTitle":{"type":"ZString","value":"Rough Business"},"m_eOutfitAICategory":{"type":"EOutfitAICategory","value":"OAC_47COLORADO"},"m_rNameTextResource":{"type":"ZRuntimeResourceID","value":{"resource":"000F07B183063228","flag":"5F"}},"m_rDescriptionTextResource":{"type":"ZRuntimeResourceID","value":{"resource":"00650E7276B62453","flag":"5F"}},"m_bHeroDisguiseAvailable":{"type":"bool","value":true},"m_bIsHitmanSuit":{"type":"bool","value":true},"m_aCharSets":{"type":"TArray<SEntityTemplateReference>","value":["feeddec3e0295ca2"],"postInit":true}}}]},{"AddEntity":["feedce52f918d2de",{"parent":"feed9f8b225ed59b","name":"Prof_Agent47","factory":"[assembly:/_pro/design/actor/profession.template?/prof_agent47.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/actor/profession.template?/prof_agent47.entitytemplate].pc_entityblueprint","properties":{"m_aHolders":{"type":"TArray<SEntityTemplateReference>","value":["feed9f8b225ed59b"]}}}]},{"AddEntity":["feed60016ed9fe91",{"parent":"feed9f8b225ed59b","name":"Prof_Hero_SignatureSuit","factory":"[assembly:/_pro/design/actor/profession.template?/prof_hero_signaturesuit.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/actor/profession.template?/prof_hero_signaturesuit.entitytemplate].pc_entityblueprint","properties":{"m_aHolders":{"type":"TArray<SEntityTemplateReference>","value":["feed9f8b225ed59b"]}}}]},{"AddEntity":["feed8462aa6c8686",{"parent":"feed9f8b225ed59b","name":"KeywordEntity_FOLEY_SUIT47","factory":"[assembly:/_pro/design/gamecore/keywords/keywordsound.template?/keywordentity_foley_outfit_suit47.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/keywords/keywordsound.template?/keywordentity_foley_outfit_suit47.entitytemplate].pc_entityblueprint","properties":{"m_rHolder":{"type":"SEntityTemplateReference","value":"feed9f8b225ed59b"}}}]},{"AddEntity":["feed0b140314d3a4",{"parent":"feed9f8b225ed59b","name":"Keyword_FOLEY_VR_OUTFIT_LEATHERGLOVES","factory":"[assembly:/_pro/design/gamecore/keywords/keywordsound.template?/keyword_foley_vr_outfit_leathergloves.entitytemplate].pc_entitytype","blueprint":"[assembly:/_pro/design/gamecore/keywords/keywordsound.template?/keyword_foley_vr_outfit_leathergloves.entitytemplate].pc_entityblueprint","properties":{"m_rHolder":{"type":"SEntityTemplateReference","value":"feed9f8b225ed59b"}}}]},{"AddEntity":["feede5c04e1c0c62",{"parent":"feed9f8b225ed59b","name":"Keyword_Prof_Class_Default","factory":"007A51A2AFEC0D1A","blueprint":"00B0282A41C1CF2E","properties":{"m_aHolders":{"type":"TArray<SEntityTemplateReference>","value":["feed9f8b225ed59b"]}}}]},{"AddEntity":["feeddec3e0295ca2",{"parent":"feed9f8b225ed59b","name":"CHARSET_Agent47_Rough_Business","factory":"0025A2F92318B750","blueprint":"00C655A5738F16F1"}]}],"patchVersion":6}
+{
+	"tempHash": "00097AA87B144150",
+	"tbluHash": "00E738E7CF7A35E1",
+	"patch": [
+		{
+			"AddEntity": [
+				"feed9f8b225ed59b",
+				{
+					"parent": "ba8ea9278df2079",
+					"name": "CHAR_Global_Hero_Rough_Business_M",
+					"factory": "[modules:/zglobaloutfitkit.class].pc_entitytype",
+					"blueprint": "[modules:/zglobaloutfitkit.class].pc_entityblueprint",
+					"properties": {
+						"m_eActorType": { "type": "EActorType", "value": "eAT_Hitman" },
+						"m_eSoundFootwearType": { "type": "EHM5SoundFootwearType", "value": "EFWT_LEATHER" },
+						"m_sId": { "type": "ZGuid", "value": "84a7b170-3b20-4b45-900e-1e44e35cf0c3" },
+						"m_bCanCallForHelp": { "type": "bool", "value": true },
+						"m_sCommonName": { "type": "ZString", "value": "CHAR_Global_Hero_Rough_Business_M" },
+						"m_sTitle": { "type": "ZString", "value": "Rough Business" },
+						"m_eOutfitAICategory": { "type": "EOutfitAICategory", "value": "OAC_47COLORADO" },
+						"m_rNameTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": { "resource": "000F07B183063228", "flag": "5F" }
+						},
+						"m_rDescriptionTextResource": {
+							"type": "ZRuntimeResourceID",
+							"value": { "resource": "00650E7276B62453", "flag": "5F" }
+						},
+						"m_bHeroDisguiseAvailable": { "type": "bool", "value": true },
+						"m_bIsHitmanSuit": { "type": "bool", "value": true },
+						"m_aCharSets": {
+							"type": "TArray<SEntityTemplateReference>",
+							"value": ["feeddec3e0295ca2"],
+							"postInit": true
+						}
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feedce52f918d2de",
+				{
+					"parent": "feed9f8b225ed59b",
+					"name": "Prof_Agent47",
+					"factory": "[assembly:/_pro/design/actor/profession.template?/prof_agent47.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/profession.template?/prof_agent47.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_aHolders": { "type": "TArray<SEntityTemplateReference>", "value": ["feed9f8b225ed59b"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed60016ed9fe91",
+				{
+					"parent": "feed9f8b225ed59b",
+					"name": "Prof_Hero_SignatureSuit",
+					"factory": "[assembly:/_pro/design/actor/profession.template?/prof_hero_signaturesuit.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/actor/profession.template?/prof_hero_signaturesuit.entitytemplate].pc_entityblueprint",
+					"properties": {
+						"m_aHolders": { "type": "TArray<SEntityTemplateReference>", "value": ["feed9f8b225ed59b"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed8462aa6c8686",
+				{
+					"parent": "feed9f8b225ed59b",
+					"name": "KeywordEntity_FOLEY_SUIT47",
+					"factory": "[assembly:/_pro/design/gamecore/keywords/keywordsound.template?/keywordentity_foley_outfit_suit47.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordsound.template?/keywordentity_foley_outfit_suit47.entitytemplate].pc_entityblueprint",
+					"properties": { "m_rHolder": { "type": "SEntityTemplateReference", "value": "feed9f8b225ed59b" } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed0b140314d3a4",
+				{
+					"parent": "feed9f8b225ed59b",
+					"name": "Keyword_FOLEY_VR_OUTFIT_LEATHERGLOVES",
+					"factory": "[assembly:/_pro/design/gamecore/keywords/keywordsound.template?/keyword_foley_vr_outfit_leathergloves.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/design/gamecore/keywords/keywordsound.template?/keyword_foley_vr_outfit_leathergloves.entitytemplate].pc_entityblueprint",
+					"properties": { "m_rHolder": { "type": "SEntityTemplateReference", "value": "feed9f8b225ed59b" } }
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feede5c04e1c0c62",
+				{
+					"parent": "feed9f8b225ed59b",
+					"name": "Keyword_Prof_Class_Default",
+					"factory": "007A51A2AFEC0D1A",
+					"blueprint": "00B0282A41C1CF2E",
+					"properties": {
+						"m_aHolders": { "type": "TArray<SEntityTemplateReference>", "value": ["feed9f8b225ed59b"] }
+					}
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feeddec3e0295ca2",
+				{
+					"parent": "feed9f8b225ed59b",
+					"name": "CHARSET_Agent47_Rough_Business",
+					"factory": "0025A2F92318B750",
+					"blueprint": "00C655A5738F16F1"
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}

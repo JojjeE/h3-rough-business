@@ -1,1 +1,13 @@
-{"tempHash":"0087CB3C6E549E70","tbluHash":"00E384F9BE511B67","patch":[{"SubEntityOperation":["f3364db3cf2cc446",{"SetPropertyValue":{"property_name":"Diffuse_Color_01_Value","value":"#2a2a2a"}}]}],"patchVersion":6}
+{
+	"tempHash": "0087CB3C6E549E70",
+	"tbluHash": "00E384F9BE511B67",
+	"patch": [
+		{
+			"SubEntityOperation": [
+				"f3364db3cf2cc446",
+				{ "SetPropertyValue": { "property_name": "Diffuse_Color_01_Value", "value": "#2a2a2a" } }
+			]
+		}
+	],
+	"patchVersion": 6
+}

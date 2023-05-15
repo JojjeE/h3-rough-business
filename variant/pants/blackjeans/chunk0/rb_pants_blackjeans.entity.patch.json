@@ -1,1 +1,59 @@
-{"tempHash":"0087CB3C6E549E70","tbluHash":"00E384F9BE511B67","patch":[{"RemoveEntityByID":"f3364db3cf2cc446"},{"RemoveEntityByID":"43f05476e0d46b7e"},{"SubEntityOperation":["28a68713dad5bbfa",{"RemoveEventConnection":["Lerp","ConstantVector1D_06_Value","43f05476e0d46b7e"]}]},{"SubEntityOperation":["28a68713dad5bbfa",{"AddEventConnection":["Lerp","ConstantVector1D_06_Value","feed2fff1f4e6b6d"]}]},{"SubEntityOperation":["2be59e71e6737922",{"PatchArrayPropertyValue":["m_aBodyParts",[{"RemoveItemByValue":"43f05476e0d46b7e"},{"AddItemAfter":["feed29b6dcf2dcd4","feed2fff1f4e6b6d"]}]]}]},{"SubEntityOperation":["f42698e15109a7e1",{"RemoveEventConnection":["Lerp","ConstantVector1D_14_Value","43f05476e0d46b7e"]}]},{"SubEntityOperation":["f42698e15109a7e1",{"AddEventConnection":["Lerp","ConstantVector1D_14_Value","feed2fff1f4e6b6d"]}]},{"AddEntity":["feed2fff1f4e6b6d",{"parent":"2be59e71e6737922","name":"Pants_Jeans_Baggy_01","factory":"008F804EFB47CB9A","blueprint":"00FED5E5CA92B3C5","properties":{"Diffuse_Color_01_Value":{"type":"SColorRGB","value":"#2A2A2A"}}}]}],"patchVersion":6}
+{
+	"tempHash": "0087CB3C6E549E70",
+	"tbluHash": "00E384F9BE511B67",
+	"patch": [
+		{ "RemoveEntityByID": "f3364db3cf2cc446" },
+		{ "RemoveEntityByID": "43f05476e0d46b7e" },
+		{
+			"SubEntityOperation": [
+				"28a68713dad5bbfa",
+				{ "RemoveEventConnection": ["Lerp", "ConstantVector1D_06_Value", "43f05476e0d46b7e"] }
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"28a68713dad5bbfa",
+				{ "AddEventConnection": ["Lerp", "ConstantVector1D_06_Value", "feed2fff1f4e6b6d"] }
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"2be59e71e6737922",
+				{
+					"PatchArrayPropertyValue": [
+						"m_aBodyParts",
+						[
+							{ "RemoveItemByValue": "43f05476e0d46b7e" },
+							{ "AddItemAfter": ["feed29b6dcf2dcd4", "feed2fff1f4e6b6d"] }
+						]
+					]
+				}
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"f42698e15109a7e1",
+				{ "RemoveEventConnection": ["Lerp", "ConstantVector1D_14_Value", "43f05476e0d46b7e"] }
+			]
+		},
+		{
+			"SubEntityOperation": [
+				"f42698e15109a7e1",
+				{ "AddEventConnection": ["Lerp", "ConstantVector1D_14_Value", "feed2fff1f4e6b6d"] }
+			]
+		},
+		{
+			"AddEntity": [
+				"feed2fff1f4e6b6d",
+				{
+					"parent": "2be59e71e6737922",
+					"name": "Pants_Jeans_Baggy_01",
+					"factory": "008F804EFB47CB9A",
+					"blueprint": "00FED5E5CA92B3C5",
+					"properties": { "Diffuse_Color_01_Value": { "type": "SColorRGB", "value": "#2A2A2A" } }
+				}
+			]
+		}
+	],
+	"patchVersion": 6
+}
