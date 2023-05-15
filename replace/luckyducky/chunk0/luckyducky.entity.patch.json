@@ -1,0 +1,1 @@
+{"tempHash":"00097AA87B144150","tbluHash":"00E738E7CF7A35E1","patch":[{"SubEntityOperation":["6cf542c3f92c07a4",{"SetFactory":"0025A2F92318B750"}]},{"SubEntityOperation":["6cf542c3f92c07a4",{"SetBlueprint":"00C655A5738F16F1"}]},{"SubEntityOperation":["f631af5b2a7b337f",{"SetPropertyValue":{"property_name":"m_eSoundFootwearType","value":"EFWT_LEATHER"}}]}],"patchVersion":6}

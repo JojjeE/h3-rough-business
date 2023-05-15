@@ -1,9 +1,564 @@
 {
 	"$schema": "https://raw.githubusercontent.com/atampy25/simple-mod-framework/main/Mod%20Manager/src/lib/manifest-schema.json",
-	"version": "0.1.0",
-	"id": "YourPreferredAlias.AnIDForTheMod",
-	"name": "Incredible Mod",
-	"description": "A truly amazing mod",
-	"authors": ["Your Preferred Alias"],
-	"frameworkVersion": "2.25.1"
+	"id": "Jojje.RoughBusinessSuit",
+	"name": "The Rough Business Suit",
+	"description": "Black leather jacket outfit, for the stylish, rough and tumble assassin. Install it for Peacock or replace a casual suit of your choice.",
+	"authors": ["Jojje"],
+	"frameworkVersion": "2.25.0",
+	"version": "1.1.1",
+	"updateCheck": "https://github.dioden.nu/updateChecks/roughbusiness.json",
+	"contentFolders": ["base"],
+	"dependencies": ["0016FC9F6C57EFA8"],
+	"options": [
+		{
+			"group": "Replace",
+			"name": "Peacock Addon",
+			"type": "select",
+			"tooltip": "Install the suit to your game as an addon without replacing existing suits. This will only work if you're playing with Peacock.",
+			"enabledByDefault": true,
+			"contentFolders": [
+				"replace/addon"
+			],
+			"blobsFolders": [
+				"blobs/addon"
+			],
+			"localisedLines": {
+				"00650E7276B62453": "UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC",
+				"000F07B183063228": "UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME"
+			},
+			"localisation": {
+				"english": {
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue.",
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME": "Rough Business"
+				},
+				"french": {
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème.",
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME": "Les affaires difficiles"
+				},
+				"italian": {
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro.",
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME": "Affari difficili"
+				},
+				"german": {
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann.",
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME": "Raues Geschäft"
+				},
+				"spanish": {
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas.",
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME": "Negocios Difíciles"
+				},
+				"russian": {
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем.",
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME": "Грубый бизнес"
+				}
+			}
+		},
+		{
+			"group": "Replace",
+			"name": "Casual Suit with Gloves",
+			"type": "select",
+			"contentFolders": [
+				"replace/bangkok"
+			],
+			"blobsFolders": [
+				"blobs/bangkok"
+			],
+			"localisationOverrides": {
+				"00985A1100E5EDDC": {
+					"english": {
+						"2741280242": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue.",
+						"4086875141": "Rough Business"
+					},
+					"french": {
+						"2741280242": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème.",
+						"4086875141": "Les affaires difficiles"
+					},
+					"italian": {
+						"2741280242": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro.",
+						"4086875141": "Affari difficili"
+					},
+					"german": {
+						"2741280242": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann.",
+						"4086875141": "Raues Geschäft"
+					},
+					"spanish": {
+						"2741280242": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas.",
+						"4086875141": "Negocios Difíciles"
+					},
+					"russian": {
+						"2741280242": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем.",
+						"4086875141": "Грубый бизнес"
+					}
+				}
+			}
+		},
+		{
+			"group": "Replace",
+			"name": "Italian Suit with Gloves",
+			"type": "select",
+			"contentFolders": [
+				"replace/sapienza"
+			],
+			"blobsFolders": [
+				"blobs/sapienza"
+			],
+			"localisationOverrides": {
+				"00985A1100E5EDDC": {
+					"english": {
+						"3346035357": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue.",
+						"3648979387": "Rough Business"
+					},
+					"french": {
+						"3346035357": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème.",
+						"3648979387": "Les affaires difficiles"
+					},
+					"italian": {
+						"3346035357": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro.",
+						"3648979387": "Affari difficili"
+					},
+					"german": {
+						"3346035357": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann.",
+						"3648979387": "Raues Geschäft"
+					},
+					"spanish": {
+						"3346035357": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas.",
+						"3648979387": "Negocios Difíciles"
+					},
+					"russian": {
+						"3346035357": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем.",
+						"3648979387": "Грубый бизнес"
+					}
+				}
+			}
+		},
+		{
+			"group": "Replace",
+			"name": "Florida Fit with Gloves",
+			"type": "select",
+			"contentFolders": [
+				"replace/miami"
+			],
+			"blobsFolders": [
+				"blobs/miami"
+			],
+			"localisationOverrides": {
+				"009F430D046716BE": {
+					"english": {
+						"1774659088": "Rough Business",
+						"3175901226": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue."
+					},
+					"french": {
+						"1774659088": "Les affaires difficiles",
+						"3175901226": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème."
+					},
+					"italian": {
+						"1774659088": "Affari difficili",
+						"3175901226": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro."
+					},
+					"german": {
+						"1774659088": "Raues Geschäft",
+						"3175901226": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann."
+					},
+					"spanish": {
+						"1774659088": "Negocios Difíciles",
+						"3175901226": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas."
+					},
+					"russian": {
+						"1774659088": "Грубый бизнес",
+						"3175901226": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем."
+					}
+				}
+			}
+		},
+		{
+			"group": "Replace",
+			"name": "Casual Tourist with Gloves",
+			"type": "select",
+			"contentFolders": [
+				"replace/sanfortuna"
+			],
+			"blobsFolders": [
+				"blobs/sanfortuna"
+			],
+			"localisationOverrides": {
+				"009F430D046716BE": {
+					"english": {
+						"2978719530": "Rough Business",
+						"3533044117": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue."
+					},
+					"french": {
+						"2978719530": "Les affaires difficiles",
+						"3533044117": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème."
+					},
+					"italian": {
+						"2978719530": "Affari difficili",
+						"3533044117": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro."
+					},
+					"german": {
+						"2978719530": "Raues Geschäft",
+						"3533044117": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann."
+					},
+					"spanish": {
+						"2978719530": "Negocios Difíciles",
+						"3533044117": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas."
+					},
+					"russian": {
+						"2978719530": "Грубый бизнес",
+						"3533044117": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем."
+					}
+				}
+			}
+		},
+		{
+			"group": "Replace",
+			"name": "Summer Suave Suit",
+			"type": "select",
+			"contentFolders": [
+				"replace/summersuave"
+			],
+			"blobsFolders": [
+				"blobs/summersuave"
+			],
+			"localisationOverrides": {
+				"009F430D046716BE": {
+					"english": {
+						"134957393": "Rough Business",
+						"2101382595": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue."
+					},
+					"french": {
+						"134957393": "Les affaires difficiles",
+						"2101382595": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème."
+					},
+					"italian": {
+						"134957393": "Affari difficili",
+						"2101382595": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro."
+					},
+					"german": {
+						"134957393": "Raues Geschäft",
+						"2101382595": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann."
+					},
+					"spanish": {
+						"134957393": "Negocios Difíciles",
+						"2101382595": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas."
+					},
+					"russian": {
+						"134957393": "Грубый бизнес",
+						"2101382595": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем."
+					}
+				}
+			}
+		},
+		{
+			"group": "Replace",
+			"name": "Summer Sightseeing Suit",
+			"type": "select",
+			"contentFolders": [
+				"replace/summersightseeing"
+			],
+			"blobsFolders": [
+				"blobs/summersightseeing"
+			],
+			"localisationOverrides": {
+				"004B8C5124A49543": {
+					"english": {
+						"2627471231": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue.",
+						"2814457931": "Rough Business"
+					},
+					"french": {
+						"2627471231": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème.",
+						"2814457931": "Les affaires difficiles"
+					},
+					"italian": {
+						"2627471231": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro.",
+						"2814457931": "Affari difficili"
+					},
+					"german": {
+						"2627471231": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann.",
+						"2814457931": "Raues Geschäft"
+					},
+					"spanish": {
+						"2627471231": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas.",
+						"2814457931": "Negocios Difíciles"
+					},
+					"russian": {
+						"2627471231": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем.",
+						"2814457931": "Грубый бизнес"
+					}
+				}
+			}
+		},
+		{
+			"group": "Replace",
+			"name": "Casual Undercover",
+			"type": "select",
+			"contentFolders": [
+				"replace/casualundercover"
+			],
+			"blobsFolders": [
+				"blobs/casualundercover"
+			],
+			"localisationOverrides": {
+				"009F430D046716BE": {
+					"english": {
+						"2052724919": "Rough Business",
+						"3635577953": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue."
+					},
+					"french": {
+						"2052724919": "Les affaires difficiles",
+						"3635577953": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème."
+					},
+					"italian": {
+						"2052724919": "Affari difficili",
+						"3635577953": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro."
+					},
+					"german": {
+						"2052724919": "Raues Geschäft",
+						"3635577953": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann."
+					},
+					"spanish": {
+						"2052724919": "Negocios Difíciles",
+						"3635577953": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas."
+					},
+					"russian": {
+						"2052724919": "Грубый бизнес",
+						"3635577953": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем."
+					}
+				}
+			}
+		},
+		{
+			"group": "Replace",
+			"name": "Midnight Black Suit",
+			"type": "select",
+			"contentFolders": [
+				"replace/midnightblack"
+			],
+			"blobsFolders": [
+				"blobs/midnightblack"
+			],
+			"localisationOverrides": {
+				"009F430D046716BE": {
+					"english": {
+						"972885031": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue.",
+						"2762453674": "Rough Business"
+					},
+					"french": {
+						"972885031": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème.",
+						"2762453674": "Les affaires difficiles"
+					},
+					"italian": {
+						"972885031": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro.",
+						"2762453674": "Affari difficili"
+					},
+					"german": {
+						"972885031": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann.",
+						"2762453674": "Raues Geschäft"
+					},
+					"spanish": {
+						"972885031": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas.",
+						"2762453674": "Negocios Difíciles"
+					},
+					"russian": {
+						"972885031": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем.",
+						"2762453674": "Грубый бизнес"
+					}
+				}
+			}
+		},
+		{
+			"group": "Replace",
+			"name": "Summer Suit with Gloves",
+			"type": "select",
+			"contentFolders": [
+				"replace/marrakesh"
+			],
+			"blobsFolders": [
+				"blobs/marrakesh"
+			],
+			"localisationOverrides": {
+				"00985A1100E5EDDC": {
+					"english": {
+						"1490534793": "Rough Business",
+						"4241939803": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue."
+					},
+					"french": {
+						"1490534793": "Les affaires difficiles",
+						"4241939803": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème."
+					},
+					"italian": {
+						"1490534793": "Affari difficili",
+						"4241939803": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro."
+					},
+					"german": {
+						"1490534793": "Raues Geschäft",
+						"4241939803": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann."
+					},
+					"spanish": {
+						"1490534793": "Negocios Difíciles",
+						"4241939803": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas."
+					},
+					"russian": {
+						"1490534793": "Грубый бизнес",
+						"4241939803": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем."
+					}
+				}
+			}
+		},
+		{
+			"group": "Replace",
+			"name": "Tropical Suit",
+			"type": "select",
+			"contentFolders": [
+				"replace/tropicalsuit"
+			],
+			"blobsFolders": [
+				"blobs/tropicalsuit"
+			],
+			"localisationOverrides": {
+				"009F430D046716BE": {
+					"english": {
+						"2053833950": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue.",
+						"2347383834": "Rough Business"
+					},
+					"french": {
+						"2053833950": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème.",
+						"2347383834": "Les affaires difficiles"
+					},
+					"italian": {
+						"2053833950": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro.",
+						"2347383834": "Affari difficili"
+					},
+					"german": {
+						"2053833950": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann.",
+						"2347383834": "Raues Geschäft"
+					},
+					"spanish": {
+						"2053833950": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas.",
+						"2347383834": "Negocios Difíciles"
+					},
+					"russian": {
+						"2053833950": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем.",
+						"2347383834": "Грубый бизнес"
+					}
+				}
+			}
+		},
+		{
+			"group": "Replace",
+			"name": "Smart Casual Suit",
+			"type": "select",
+			"contentFolders": [
+				"replace/smartcasual"
+			],
+			"blobsFolders": [
+				"blobs/smartcasual"
+			],
+			"localisationOverrides": {
+				"009F430D046716BE": {
+					"english": {
+						"252086724": "Rough Business",
+						"678625422": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue."
+					},
+					"french": {
+						"252086724": "Les affaires difficiles",
+						"678625422": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème."
+					},
+					"italian": {
+						"252086724": "Affari difficili",
+						"678625422": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro."
+					},
+					"german": {
+						"252086724": "Raues Geschäft",
+						"678625422": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann."
+					},
+					"spanish": {
+						"252086724": "Negocios Difíciles",
+						"678625422": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas."
+					},
+					"russian": {
+						"252086724": "Грубый бизнес",
+						"678625422": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем."
+					}
+				}
+			}
+		},
+		{
+			"group": "Replace",
+			"name": "The Raver",
+			"type": "select",
+			"contentFolders": [
+				"replace/raver"
+			],
+			"blobsFolders": [
+				"blobs/raver"
+			],
+			"localisationOverrides": {
+				"004B8C5124A49543": {
+					"english": {
+						"3362995256": "Rough Business",
+						"4079878924": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue."
+					},
+					"french": {
+						"3362995256": "Les affaires difficiles",
+						"4079878924": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème."
+					},
+					"italian": {
+						"3362995256": "Affari difficili",
+						"4079878924": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro."
+					},
+					"german": {
+						"3362995256": "Raues Geschäft",
+						"4079878924": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann."
+					},
+					"spanish": {
+						"3362995256": "Negocios Difíciles",
+						"4079878924": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas."
+					},
+					"russian": {
+						"3362995256": "Грубый бизнес",
+						"4079878924": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем."
+					}
+				}
+			}
+		},
+		{
+			"group": "Replace",
+			"name": "Lucky Ducky",
+			"type": "select",
+			"contentFolders": [
+				"replace/luckyducky"
+			],
+			"blobsFolders": [
+				"blobs/luckyducky"
+			],
+			"localisationOverrides": {
+				"004B8C5124A49543": {
+					"english": {
+						"2760943898": "Rough Business",
+						"2681050670": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue."
+					},
+					"french": {
+						"2760943898": "Les affaires difficiles",
+						"2681050670": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème."
+					},
+					"italian": {
+						"2760943898": "Affari difficili",
+						"2681050670": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro."
+					},
+					"german": {
+						"2760943898": "Raues Geschäft",
+						"2681050670": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann."
+					},
+					"spanish": {
+						"2760943898": "Negocios Difíciles",
+						"2681050670": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas."
+					},
+					"russian": {
+						"2760943898": "Грубый бизнес",
+						"2681050670": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем."
+					}
+				}
+			}
+		}
+	]
 }

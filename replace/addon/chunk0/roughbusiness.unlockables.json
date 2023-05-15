@@ -1,0 +1,25 @@
+{
+	"TOKEN_OUTFIT_HERO_ROUGH_BUSINESS": {
+		"Id": "TOKEN_OUTFIT_HERO_ROUGH_BUSINESS",
+		"Guid": "37a891f9-12d5-4177-95ad-1a14500f6caf",
+		"Type": "disguise",
+		"Subtype": "casual",
+		"ImageId": "",
+		"RMTPrice": -1,
+		"GamePrice": -1,
+		"IsPurchasable": false,
+		"IsPublished": true,
+		"IsDroppable": false,
+		"Capabilities": [],
+		"Qualities": {},
+		"Properties": {
+			"Quality": 2,
+			"Rarity": "common",
+			"LoadoutSlot": "disguise",
+			"IsConsumable": false,
+			"RepositoryId": "84a7b170-3b20-4b45-900e-1e44e35cf0c3",
+			"OrderIndex": 21
+		},
+		"Rarity": "common"
+	}
+}

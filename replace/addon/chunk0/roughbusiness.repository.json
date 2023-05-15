@@ -1,0 +1,14 @@
+{
+	"84a7b170-3b20-4b45-900e-1e44e35cf0c3": {
+		"ID_": "84a7b170-3b20-4b45-900e-1e44e35cf0c3",
+		"CommonName": "CHAR_Global_Hero_Rough_Business_M",
+		"Description": "UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC",
+		"HeroDisguiseAvailable": true,
+		"Image": "images/unlockables_override/47_Outfits_rough_business.jpg",
+		"IsHitmanSuit": true,
+		"Name": "UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME",
+		"Category": "",
+		"ImageTransparent": "",
+		"TokenID": "TOKEN_OUTFIT_HERO_ROUGH_BUSINESS"
+	}
+}
