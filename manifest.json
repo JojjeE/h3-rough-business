@@ -559,6 +559,67 @@
 					}
 				}
 			}
+		},
+		{
+			"group": "Jacket",
+			"name": "Black (Default)",
+			"type": "select",
+			"tooltip": "Regular black leather jacket.",
+			"enabledByDefault": true
+		},
+		{
+			"group": "Jacket",
+			"name": "Brown",
+			"type": "select",
+			"tooltip": "Light brown leather jacket.",
+			"image": "brownjacket.jpg",
+			"contentFolders": ["variant/jacket/brown"]
+		},
+		{
+			"group": "Pants",
+			"name": "Gray slacks (Default)",
+			"type": "select",
+			"tooltip": "Regular gray dress slacks.",
+			"enabledByDefault": true
+		},
+		{
+			"group": "Pants",
+			"name": "Black slacks",
+			"type": "select",
+			"tooltip": "Black dress slacks.",
+			"image": "blackslacks.jpg",
+			"contentFolders": ["variant/pants/blackslacks"]
+		},
+		{
+			"group": "Pants",
+			"name": "Blue jeans",
+			"type": "select",
+			"tooltip": "Blue jeans.",
+			"image": "bluejeans.jpg",
+			"contentFolders": ["variant/pants/bluejeans"]
+		},
+		{
+			"group": "Pants",
+			"name": "Black jeans",
+			"type": "select",
+			"tooltip": "Black jeans.",
+			"image": "blackjeans.jpg",
+			"contentFolders": ["variant/pants/blackjeans"]
+		},
+		{
+			"group": "Gloves",
+			"name": "Leather gloves (Default)",
+			"type": "select",
+			"tooltip": "Regular black leather gloves.",
+			"enabledByDefault": true
+		},
+		{
+			"group": "Gloves",
+			"name": "Driving gloves",
+			"type": "select",
+			"tooltip": "Black driving gloves.",
+			"image": "drivinggloves.jpg",
+			"contentFolders": ["variant/gloves/drivinggloves"]
 		}
 	]
 }
