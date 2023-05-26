@@ -154,7 +154,7 @@ jobs:
               uses: softprops/action-gh-release@v1
               with:
                   name: ${{ steps.newVersion.outputs.new-release-version }}
-                  body: ${{ steps.changelog.outputs.changes }}
+                  body: "[Install](https://hitman-resources.netlify.app/smf-install-link/${{ format('https://github.com/{0}/releases/download/{1}/mod.framework.zip', github.repository, steps.newVersion.outputs.new-release-version) }}) this release.\n${{ steps.changelog.outputs.changes }}"
                   tag_name: ${{ steps.newVersion.outputs.new-release-version }}
                   repository: ${{ github.repository }}
                   files: |
