@@ -52,20 +52,14 @@ const challenges = [
 						{
 							Actions: {
 								$inc: "Count",
-								$pushunique: [
-									"TargetKilled",
-									"$Value.RepositoryId"
-								]
+								$pushunique: ["TargetKilled", "$Value.RepositoryId"]
 							},
 							Condition: {
 								$and: [
 									{
 										$any: {
 											"?": {
-												$eq: [
-													"$.#",
-													"$Value.RepositoryId"
-												]
+												$eq: ["$.#", "$Value.RepositoryId"]
 											},
 											in: [
 												"967abcf9-2672-4e81-8fef-211aaa366747",
@@ -74,19 +68,13 @@ const challenges = [
 										}
 									},
 									{
-										$eq: [
-											"$Value.KillItemCategory",
-											"fiberwire"
-										]
+										$eq: ["$Value.KillItemCategory", "fiberwire"]
 									},
 									{
 										$not: {
 											$any: {
 												"?": {
-													$eq: [
-														"$.#",
-														"$Value.RepositoryId"
-													]
+													$eq: ["$.#", "$Value.RepositoryId"]
 												},
 												in: "$.TargetKilled"
 											}
@@ -97,10 +85,7 @@ const challenges = [
 						},
 						{
 							Condition: {
-								$eq: [
-									"$.Count",
-									"$.TargetGoal"
-								]
+								$eq: ["$.Count", "$.TargetGoal"]
 							},
 							Transition: "Success"
 						}
