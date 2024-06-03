@@ -12,11 +12,62 @@
 	"options": [
 		{
 			"group": "Replace",
-			"name": "Peacock Addon",
+			"name": "Peacock Addon (Challenge)",
 			"type": "select",
-			"tooltip": "Install the suit to your game as an addon without replacing existing suits. This will only work if you're playing with Peacock.",
+			"tooltip": "Install the suit to your game as an addon without replacing existing suits. You will need to complete the Chongqing assassination challenge \"Hands Dirtied\" to unlock the suit. This will only work if you're playing with Peacock.",
 			"enabledByDefault": true,
 			"contentFolders": ["replace/addon"],
+			"blobsFolders": ["blobs/addon"],
+			"localisedLines": {
+				"00650E7276B62453": "UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC",
+				"000F07B183063228": "UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME"
+			},
+			"localisation": {
+				"english": {
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue.",
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME": "Rough Business",
+					"UI_CHALLENGES_ROUGH_BUSINESS_WIRE_NAME": "Hands Dirtied",
+					"UI_CHALLENGES_ROUGH_BUSINESS_WIRE_DESC": "<li>Eliminate Hush with the Fiber Wire.</li><li>Eliminate Imogen Royce with the Fiber Wire.</li>"
+				},
+				"french": {
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème.",
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME": "Les affaires difficiles",
+					"UI_CHALLENGES_ROUGH_BUSINESS_WIRE_NAME": "Mains Sales",
+					"UI_CHALLENGES_ROUGH_BUSINESS_WIRE_DESC": "<li>Assassinez Hush avec la corde de piano.</li><li>Assassinez Imogen Royce avec la corde de piano.</li>"
+				},
+				"italian": {
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro.",
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME": "Affari difficili",
+					"UI_CHALLENGES_ROUGH_BUSINESS_WIRE_NAME": "Mani Sporche",
+					"UI_CHALLENGES_ROUGH_BUSINESS_WIRE_DESC": "<li>Elimina Hush con il cavo di fibra.</li><li>Elimina Imogen Royce con il cavo di fibra.</li>"
+				},
+				"german": {
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann.",
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME": "Raues Geschäft",
+					"UI_CHALLENGES_ROUGH_BUSINESS_WIRE_NAME": "Schmutzige Hände",
+					"UI_CHALLENGES_ROUGH_BUSINESS_WIRE_DESC": "<li>Eliminieren Sie Hush mit der Klaviersaite.</li><li>Eliminieren Sie Imogen Royce mit der Klaviersaite.</li>"
+				},
+				"spanish": {
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas.",
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME": "Negocios Difíciles",
+					"UI_CHALLENGES_ROUGH_BUSINESS_WIRE_NAME": "Manos Sucias",
+					"UI_CHALLENGES_ROUGH_BUSINESS_WIRE_DESC": "<li>Elimina Hush con el cable de fibra.</li><li>Elimina Imogen Royce con el cable de fibra.</li>"
+				},
+				"russian": {
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем.",
+					"UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_NAME": "Грубый бизнес",
+					"UI_CHALLENGES_ROUGH_BUSINESS_WIRE_NAME": "Испачканные Руки",
+					"UI_CHALLENGES_ROUGH_BUSINESS_WIRE_DESC": "<li>Устраните Хаша с помощью удавки.</li><li>Устраните Имоджен Ройс с помощью удавки.</li>"
+				}
+			},
+			"peacockPlugins": ["replace/addon_challenge/RoughBusinessSuit.plugin.js"]
+		},
+		{
+			"group": "Replace",
+			"name": "Peacock Addon (Unlocked)",
+			"type": "select",
+			"tooltip": "Install the suit to your game as an addon without replacing existing suits. Unlocked from the start, you won't need to complete a challenge to use it. This will only work if you're playing with Peacock.",
+			"contentFolders": ["replace/addon", "replace/addon_nochallenge"],
 			"blobsFolders": ["blobs/addon"],
 			"localisedLines": {
 				"00650E7276B62453": "UI_TOKEN_OUTFIT_HERO_ROUGH_BUSINESS_DESC",
