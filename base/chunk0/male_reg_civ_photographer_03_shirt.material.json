@@ -1,0 +1,182 @@
+{
+	"$schema": "https://glaciermodding.org/schemas/material.schema.json",
+	"MATI": "[assembly:/_pro/characters/assets/civilians/formal_01/materials/male_reg_civ_photographer_03_shirt.mi].pc_mi",
+	"MATT": "[assembly:/_pro/characters/assets/civilians/formal_01/materials/male_reg_civ_photographer_03_shirt.mi].pc_entitytype",
+	"MATB": "[assembly:/_pro/characters/assets/civilians/formal_01/materials/male_reg_civ_photographer_03_shirt.mi].pc_entityblueprint",
+	"MATE": "[[assembly:/_pro/characters/materialclasses/basic.materialclass].fx](dx11).pc_mate",
+	"ERES": "[assembly:/_pro/effects/templates/materialdescriptors/fx_md_char_cloth.template?/fx_md_char_cloth.entitytemplate].pc_entityresource",
+	"TYPE": "Standard",
+	"Material": {
+		"Instance": [
+			{
+				"Name": "male_reg_civ_photographer_03_shirt.mi",
+				"Tags": "",
+				"Binder": [
+					{
+						"Render State": [
+							{
+								"Name": "RenderState",
+								"Enabled": 1,
+								"Blend Enabled": 0,
+								"Decal Blend Diffuse": 0,
+								"Decal Blend Normal": 0,
+								"Decal Blend Specular": 0,
+								"Decal Blend Roughness": 0,
+								"Decal Blend Emission": 0,
+								"Alpha Test Enabled": 0,
+								"Alpha Reference": 255,
+								"Fog Enabled": 1,
+								"Culling Mode": "DontCare",
+								"Z Bias": 0,
+								"Z Offset": 0,
+								"Subsurface Red": 0,
+								"Subsurface Green": 0,
+								"Subsurface Blue": 0,
+								"Subsurface Value": 0
+							}
+						],
+						"Texture": [
+							{
+								"Name": "mapTexture2DNormal_01",
+								"Enabled": 1,
+								"Texture Id": "[assembly:/_pro/characters/assets/civilians/formal_01/textures/male_reg_civ_photographer_03_shirt.texture?/normal_a.tex](asnormalmap).pc_tex",
+								"Tiling U": "",
+								"Tiling V": "",
+								"Type": "AsNormalMap"
+							},
+							{
+								"Name": "mapTexture2D_03",
+								"Enabled": 1,
+								"Texture Id": "[assembly:/_pro/characters/assets/civilians/formal_01/textures/male_reg_civ_photographer_03_shirt.texture?/specular_a.tex](ascolormap).pc_tex",
+								"Tiling U": "",
+								"Tiling V": "",
+								"Type": "AsColorMap"
+							},
+							{
+								"Name": "mapTexture2D_01",
+								"Enabled": 1,
+								"Texture Id": "[assembly:/_pro/characters/assets/civilians/formal_01/textures/male_reg_civ_photographer_03_shirt.texture?/diffuse_a.tex](ascolormap).pc_tex",
+								"Tiling U": "",
+								"Tiling V": "",
+								"Type": "AsColorMap"
+							}
+						],
+						"Float Value": [
+							{
+								"Name": "ConstantVector1D_06_Value",
+								"Enabled": 1,
+								"Value": 1
+							},
+							{
+								"Name": "gm_mTransform2D_01",
+								"Enabled": 1,
+								"Value": [1, 0, 0, 0, 0, 1, 0, 0]
+							},
+							{
+								"Name": "ConstantVector1D_04_Value",
+								"Enabled": 1,
+								"Value": 0
+							},
+							{
+								"Name": "ConstantVector1D_05_Value",
+								"Enabled": 1,
+								"Value": 1
+							},
+							{
+								"Name": "ConstantVector1D_03_Value",
+								"Enabled": 1,
+								"Value": 1
+							},
+							{
+								"Name": "ConstantVector1D_01_Value",
+								"Enabled": 1,
+								"Value": 0.5
+							},
+							{
+								"Name": "Diffuse_Saturation_01_Value",
+								"Enabled": 1,
+								"Value": 1
+							},
+							{
+								"Name": "Diffuse_Hue_Shift_01_Value",
+								"Enabled": 1,
+								"Value": 0
+							}
+						],
+						"Color": [
+							{
+								"Name": "Diffuse_Color_01_Value",
+								"Enabled": 1,
+								"Value": [1, 1, 1]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	"Overrides": {
+		"Texture": {
+			"Texture2DNormal_01": "[assembly:/_pro/characters/assets/civilians/formal_01/textures/male_reg_civ_photographer_03_shirt.texture?/normal_a.tex](asnormalmap).pc_tex",
+			"Texture2D_03": "[assembly:/_pro/characters/assets/civilians/formal_01/textures/male_reg_civ_photographer_03_shirt.texture?/specular_a.tex](ascolormap).pc_tex",
+			"Texture2D_01": "[assembly:/_pro/characters/assets/civilians/formal_01/textures/male_reg_civ_photographer_03_shirt.texture?/diffuse_a.tex](ascolormap).pc_tex"
+		},
+		"Color": {
+			"Diffuse_Color_01_Value": [1, 1, 1]
+		},
+		"ConstantVector1D_06_Value": 1,
+		"ConstantVector1D_04_Value": 0,
+		"ConstantVector1D_05_Value": 1,
+		"ConstantVector1D_03_Value": 1,
+		"ConstantVector1D_01_Value": 0.5,
+		"Diffuse_Saturation_01_Value": 1,
+		"Diffuse_Hue_Shift_01_Value": 0
+	},
+	"Flags": {
+		"Class": {
+			"REFLECTION2D": false,
+			"REFRACTION2D": false,
+			"LIGHTING": true,
+			"EMISSIVE": false,
+			"DISCARD": false,
+			"LM_SKIN": false,
+			"PRIMCLASS_STANDARD": true,
+			"PRIMCLASS_LINKED": false,
+			"PRIMCLASS_WEIGHTED": false,
+			"DOFOVERRIDE": false,
+			"USES_DEFAULT_VS": true,
+			"USES_SPRITE_SA_VS": false,
+			"USES_SPRITE_AO_VS": false,
+			"ALPHA": false,
+			"USES_SIMPLE_SHADER": true,
+			"DISABLE_INSTANCING": false,
+			"LM_HAIR": false,
+			"SAMPLE_LIGHTING": false,
+			"HORIZONMAPPING": false,
+			"UNKNOWN_3": false,
+			"UNKNOWN_4": false,
+			"UNKNOWN_5": false
+		},
+		"Instance": {
+			"OPAQUE_EMISSIVE": false,
+			"TRANS_EMISSIVE": false,
+			"TRANSADD_EMISSIVE": false,
+			"TRANSALL": false,
+			"OPAQUE_LIT": true,
+			"TRANS_LIT": false,
+			"DECAL": false,
+			"REFRACTIVE": false,
+			"LM_SKIN": false,
+			"LM_HAIR": false,
+			"FORCE_EMISSIVE": false,
+			"DISABLE_SHADER_LOD": true,
+			"DISCARD": false,
+			"DECAL_EMISSIVE": false,
+			"DECAL_ALL": false,
+			"WATER_CLIPPING": false,
+			"SAMPLE_LIGHTING": false,
+			"EXCLUDE_GLOBAL_SHADOWS": false,
+			"ALL": false
+		}
+	}
+}

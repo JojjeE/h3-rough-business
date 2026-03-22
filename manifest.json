@@ -571,6 +571,21 @@
 			"contentFolders": ["variant/jacket/brown"]
 		},
 		{
+			"group": "Jacket Zip",
+			"name": "Zipped (Default)",
+			"type": "select",
+			"tooltip": "Jacket zipped up.",
+			"enabledByDefault": true
+		},
+		{
+			"group": "Jacket Zip",
+			"name": "Unzipped",
+			"type": "select",
+			"tooltip": "Jacket unzipped.",
+			"image": "unzipped.jpg",
+			"contentFolders": ["variant/jacket/open"]
+		},
+		{
 			"group": "Pants",
 			"name": "Gray slacks (Default)",
 			"type": "select",
