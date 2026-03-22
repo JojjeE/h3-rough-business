@@ -6,4 +6,4 @@ Black leather jacket outfit, for the stylish, rough and tumble assassin. Install
 
 ---
 
-`Jojje.RoughBusinessSuit` v1.3.0, by Jojje. This README was automatically generated from the mod's manifest.
+`Jojje.RoughBusinessSuit` v1.4.0, by Jojje. This README was automatically generated from the mod's manifest.
