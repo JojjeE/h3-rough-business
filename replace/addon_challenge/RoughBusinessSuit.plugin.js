@@ -5,7 +5,6 @@
  * @licence LGPL-v3
  */
 
-const { PEACOCKVER, PEACOCKVERSTRING } = require("@peacockproject/core/utils")
 const { log, LogLevel } = require("@peacockproject/core/loggingInterop")
 
 const challenges = [
@@ -101,14 +100,16 @@ const challenges = [
 ]
 
 module.exports = function RoughBusinessSuit(controller) {
-	if (Math.abs(PEACOCKVER) < 7000) {
-		log(LogLevel.ERROR, `[Rough Business Suit] This plugin requires Peacock v7! You're on v${PEACOCKVERSTRING}!`)
-		return
-	}
+	controller.hooks.onUserLogin.tap("Rough Business Suit", async (version, userId) => {
+		if (!controller.smf.modEnabledForUser(userId, `Jojje.RoughBusinessSuit@1.4.1`)) {
+			log(LogLevel.ERROR, "[Rough Business Suit] Mod currently not deployed, please deploy it in SMF.")
+			return
+		}
 
-	for (const challenge of challenges) {
-		controller.challengeService.registerChallenge(challenge, "assassination", challenge.ParentLocationId, "h3")
-	}
+		for (const challenge of challenges) {
+			controller.challengeService.registerChallenge(challenge, "assassination", challenge.ParentLocationId, "h3")
+		}
 
-	log(LogLevel.INFO, "[Rough Business Suit] Ready. (Plugin Started)")
+		log(LogLevel.INFO, "[Rough Business Suit] Ready. (Plugin Started)")
+	})
 }
