@@ -283,7 +283,7 @@
 				{
 					"id": "rb-jacket-color",
 					"type": "color",
-					"name": "Jacket Color",
+					"name": "Color",
 					"defaultValue": "#2b2b2b",
 					"description": "Change color of leather jacket."
 				}
