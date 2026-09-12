@@ -1,0 +1,21 @@
+{
+	"id": "[assembly:/localization/hitman6/conversations/ui/pro/online/repository/outfits_hero_s2.sweetmenutext].pc_localized-textlist",
+	"lines": {
+		"CHAR_STINGRAY_REWARD_HERO_ISLANDSUIT_M_PRO164643_DESCRIPTION_F5A61EF1-245B-4FA4-891D-76079FC629E4": {
+			"english": "A stylish ensemble of smart gray dress slacks, a tough and durable black leather jacket and work boots. A pair of leather gloves finish the look, with assurance that any rough business can be handled without issue.",
+			"french": "Un ensemble stylé composé d'un élégant pantalon gris, d'une veste en cuir noir résistante et durable et de bottes de travail. Une paire de gants en cuir complète le look, avec l'assurance que toute affaire difficile peut être traitée sans problème.",
+			"german": "Ein stilvolles Ensemble aus einer eleganten grauen Anzughose, einer robusten und langlebigen schwarzen Lederjacke und Arbeitsstiefeln. Ein Paar Lederhandschuhe vervollständigen den Look, mit der Gewissheit, dass jedes raue Geschäft ohne Probleme erledigt werden kann.",
+			"italian": "Un insieme di stile con eleganti pantaloni grigi, una giacca di pelle nera resistente e durevole e stivali da lavoro. Un paio di guanti in pelle completano il look, con la certezza di poter affrontare senza problemi qualsiasi lavoro duro.",
+			"russian": "Стильный ансамбль из нарядных серых брюк, прочной и долговечной черной кожаной куртки и рабочих ботинок. Пара кожаных перчаток завершает образ, давая уверенность в том, что с любым грубым делом можно справиться без проблем.",
+			"spanish": "Un elegante conjunto de pantalones de vestir grises, una resistente chaqueta de cuero negro y botas de trabajo. Un par de guantes de cuero rematan el look, con la seguridad de que cualquier asunto escabroso puede resolverse sin problemas."
+		},
+		"CHAR_STINGRAY_REWARD_HERO_ISLANDSUIT_M_PRO164643_NAME_F5A61EF1-245B-4FA4-891D-76079FC629E4": {
+			"english": "Rough Business",
+			"french": "Les affaires difficiles",
+			"german": "Raues Geschäft",
+			"italian": "Affari difficili",
+			"russian": "Грубый бизнес",
+			"spanish": "Negocios Difíciles"
+		}
+	}
+}

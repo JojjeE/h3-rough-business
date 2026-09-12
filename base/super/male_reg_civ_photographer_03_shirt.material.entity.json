@@ -1,0 +1,27 @@
+{
+	"factory": "[assembly:/_pro/characters/assets/civilians/formal_01/materials/male_reg_civ_photographer_03_shirt.mi].pc_entitytype",
+	"blueprint": "[assembly:/_pro/characters/assets/civilians/formal_01/materials/male_reg_civ_photographer_03_shirt.mi].pc_entityblueprint",
+	"material": "[assembly:/_pro/characters/assets/civilians/formal_01/materials/male_reg_civ_photographer_03_shirt.mi].pc_mi",
+	"overrides": {
+		"Texture2DNormal_01": {
+			"type": "texture",
+			"value": "[assembly:/_pro/characters/assets/civilians/formal_01/textures/male_reg_civ_photographer_03_shirt.texture?/normal_a.tex](asnormalmap).pc_tex"
+		},
+		"Texture2D_03": {
+			"type": "texture",
+			"value": "[assembly:/_pro/characters/assets/civilians/formal_01/textures/male_reg_civ_photographer_03_shirt.texture?/specular_a.tex](ascolormap).pc_tex"
+		},
+		"Texture2D_01": {
+			"type": "texture",
+			"value": "[assembly:/_pro/characters/assets/civilians/formal_01/textures/male_reg_civ_photographer_03_shirt.texture?/diffuse_a.tex](ascolormap).pc_tex"
+		},
+		"Diffuse_Color_01_Value": { "type": "color", "value": "ffffff" },
+		"ConstantVector1D_06_Value": { "type": "float", "value": 1.0 },
+		"ConstantVector1D_04_Value": { "type": "float", "value": 0.0 },
+		"ConstantVector1D_05_Value": { "type": "float", "value": 1.0 },
+		"ConstantVector1D_03_Value": { "type": "float", "value": 1.0 },
+		"ConstantVector1D_01_Value": { "type": "float", "value": 0.5 },
+		"Diffuse_Saturation_01_Value": { "type": "float", "value": 1.0 },
+		"Diffuse_Hue_Shift_01_Value": { "type": "float", "value": 0.0 }
+	}
+}

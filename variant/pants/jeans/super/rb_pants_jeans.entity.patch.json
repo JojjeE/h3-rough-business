@@ -1,0 +1,77 @@
+{
+	"factory": "0087CB3C6E549E70",
+	"blueprint": "00E384F9BE511B67",
+	"patch": [
+		{ "RemoveEntity": "f3364db3cf2cc446" },
+		{ "RemoveEntity": "43f05476e0d46b7e" },
+		{
+			"PatchEntity": [
+				"28a68713dad5bbfa",
+				{ "RemoveEventConnection": ["Lerp", "ConstantVector1D_06_Value", "43f05476e0d46b7e"] }
+			]
+		},
+		{
+			"PatchEntity": [
+				"28a68713dad5bbfa",
+				{ "AddEventConnection": ["Lerp", "ConstantVector1D_06_Value", "feed2fff1f4e6b6d"] }
+			]
+		},
+		{
+			"PatchEntity": [
+				"2be59e71e6737922",
+				{
+					"PatchPropertyValue": [
+						"m_aBodyParts",
+						{
+							"ArrayPatch": [
+								{
+									"type": "add",
+									"before": [],
+									"after": [
+										[{ "type": "SEntityTemplateReference", "value": "feed96051ef0a782" }, 0],
+										[{ "type": "SEntityTemplateReference", "value": "43f05476e0d46b7e" }, 0],
+										[{ "type": "SEntityTemplateReference", "value": "c73c8d9f5050d9c3" }, 0],
+										[{ "type": "SEntityTemplateReference", "value": "feed07da16ca1ccf" }, 0],
+										[{ "type": "SEntityTemplateReference", "value": "feed8f07586fbabb" }, 0],
+										[{ "type": "SEntityTemplateReference", "value": "feed29b6dcf2dcd4" }, 0]
+									],
+									"item": { "type": "SEntityTemplateReference", "value": "feed2fff1f4e6b6d" }
+								},
+								{
+									"type": "remove",
+									"item": [{ "type": "SEntityTemplateReference", "value": "43f05476e0d46b7e" }, 0]
+								}
+							]
+						},
+						true
+					]
+				}
+			]
+		},
+		{
+			"PatchEntity": [
+				"f42698e15109a7e1",
+				{ "RemoveEventConnection": ["Lerp", "ConstantVector1D_14_Value", "43f05476e0d46b7e"] }
+			]
+		},
+		{
+			"PatchEntity": [
+				"f42698e15109a7e1",
+				{ "AddEventConnection": ["Lerp", "ConstantVector1D_14_Value", "feed2fff1f4e6b6d"] }
+			]
+		},
+		{
+			"AddEntity": [
+				"feed2fff1f4e6b6d",
+				{
+					"parent": "2be59e71e6737922",
+					"name": "Pants_Jeans_Baggy_01",
+					"factory": "[assembly:/_pro/characters/templates/_part_library/male_apparel/male_reg_apparel_legs.template?/pants_jeans_baggy.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/characters/templates/_part_library/male_apparel/male_reg_apparel_legs.template?/pants_jeans_baggy.entitytemplate].pc_entityblueprint",
+					"properties": { "Diffuse_Color_01_Value": { "type": "SColorRGB", "value": "#{option:rb-pants-color}" } }
+				}
+			]
+		}
+	],
+	"patchVersion": 7
+}

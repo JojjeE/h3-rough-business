@@ -1,0 +1,58 @@
+{
+	"factory": "0087CB3C6E549E70",
+	"blueprint": "00E384F9BE511B67",
+	"patch": [
+		{ "RemoveEntity": "feed07da16ca1ccf" },
+		{ "RemoveEntity": "feed560222003c98" },
+		{
+			"PatchEntity": [
+				"41107d5069b7081d",
+				{ "RemoveEventConnection": ["Lerp", "ConstantVector1D_04_Value", "feed07da16ca1ccf"] }
+			]
+		},
+		{
+			"PatchEntity": [
+				"2be59e71e6737922",
+				{
+					"PatchPropertyValue": [
+						"m_aBodyParts",
+						{
+							"ArrayPatch": [
+								{
+									"type": "add",
+									"before": [],
+									"after": [
+										[{ "type": "SEntityTemplateReference", "value": "feed96051ef0a782" }, 0],
+										[{ "type": "SEntityTemplateReference", "value": "43f05476e0d46b7e" }, 0],
+										[{ "type": "SEntityTemplateReference", "value": "c73c8d9f5050d9c3" }, 0],
+										[{ "type": "SEntityTemplateReference", "value": "feed07da16ca1ccf" }, 0],
+										[{ "type": "SEntityTemplateReference", "value": "feed8f07586fbabb" }, 0],
+										[{ "type": "SEntityTemplateReference", "value": "feed29b6dcf2dcd4" }, 0]
+									],
+									"item": { "type": "SEntityTemplateReference", "value": "feed317113ac8f1c" }
+								},
+								{
+									"type": "remove",
+									"item": [{ "type": "SEntityTemplateReference", "value": "feed07da16ca1ccf" }, 0]
+								}
+							]
+						},
+						true
+					]
+				}
+			]
+		},
+		{
+			"AddEntity": [
+				"feed317113ac8f1c",
+				{
+					"parent": "2be59e71e6737922",
+					"name": "Agent47_Gloves_Driving",
+					"factory": "[assembly:/_pro/characters/templates/_part_library/male_apparel/agent47_apparel.template?/agent47_gloves_driving.entitytemplate].pc_entitytype",
+					"blueprint": "[assembly:/_pro/characters/templates/_part_library/male_apparel/agent47_apparel.template?/agent47_gloves_driving.entitytemplate].pc_entityblueprint"
+				}
+			]
+		}
+	],
+	"patchVersion": 7
+}

@@ -1,0 +1,10 @@
+{
+	"patch": [
+		{
+			"op": "add",
+			"path": "/PACKAGE_STARTING_PACKAGE/Properties/Unlocks/-",
+			"value": "TOKEN_OUTFIT_HERO_ROUGH_BUSINESS"
+		}
+	],
+	"id": "[assembly:/_pro/online/default/offlineconfig/config.unlockables].pc_unlockables"
+}

@@ -1,0 +1,11 @@
+{
+	"id": "[assembly:/_pro/characters/assets/_apparel/male/volumes_l02/jackets/geometry/male_reg_jackets_02.wl2?/jacket_leather_open.weightedprim](bodypart).pc_weightedprim",
+	"type": "PRIM",
+	"references": [
+		"[assembly:/_pro/characters/assets/_apparel/male/volumes_l02/jackets/geometry/male_reg_jackets_02.wl2?/jacket_leather_open.weightedprim](bodypart).pc_bonerig",
+		{
+			"resource": "[assembly:/_pro/characters/assets/individuals/paris/elusive_target_kamikaze_m/materials/male_reg_kamikaze_jacket_01.mi].pc_mi",
+			"type": "normal"
+		}
+	]
+}

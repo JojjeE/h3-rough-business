@@ -1,0 +1,62 @@
+{
+	"id": "[assembly:/_pro/characters/assets/civilians/formal_01/materials/male_reg_civ_photographer_03_shirt.mi].pc_mi",
+	"name": "male_reg_civ_photographer_03_shirt.mi",
+	"type": "Standard",
+	"class": "[[assembly:/_pro/characters/materialclasses/basic.materialclass].fx](dx11).pc_mate",
+	"descriptor": "[assembly:/_pro/effects/templates/materialdescriptors/fx_md_char_cloth.template?/fx_md_char_cloth.entitytemplate].pc_entityresource",
+	"classFlags": {
+		"lighting": true,
+		"primStandard": true,
+		"usesDefaultVS": true,
+		"usesSimpleShader": true
+	},
+	"instanceFlags": { "opaqueLit": true, "disableShaderLod": true },
+	"renderState": {
+		"enabled": true,
+		"blendEnabled": false,
+		"decalBlendDiffuse": 0,
+		"decalBlendNormal": 0,
+		"decalBlendSpecular": 0,
+		"decalBlendRoughness": 0,
+		"decalBlendEmission": 0,
+		"alphaTestEnabled": false,
+		"alphaReference": 255,
+		"fogEnabled": true,
+		"cullingMode": "DontCare",
+		"zBias": 0,
+		"zOffset": 0.0,
+		"subsurfaceRed": 0.0,
+		"subsurfaceGreen": 0.0,
+		"subsurfaceBlue": 0.0,
+		"subsurfaceValue": 0.0
+	},
+	"properties": {
+		"ConstantVector1D_06_Value": { "enabled": true, "value": 1.0 },
+		"gm_mTransform2D_01": {
+			"enabled": true,
+			"value": [1.0, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0, 0.0]
+		},
+		"ConstantVector1D_04_Value": { "enabled": true, "value": 0.0 },
+		"ConstantVector1D_05_Value": { "enabled": true, "value": 1.0 },
+		"ConstantVector1D_03_Value": { "enabled": true, "value": 1.0 },
+		"ConstantVector1D_01_Value": { "enabled": true, "value": 0.5 },
+		"Diffuse_Saturation_01_Value": { "enabled": true, "value": 1.0 },
+		"Diffuse_Hue_Shift_01_Value": { "enabled": true, "value": 0.0 },
+		"mapTexture2DNormal_01": {
+			"enabled": true,
+			"value": "[assembly:/_pro/characters/assets/civilians/formal_01/textures/male_reg_civ_photographer_03_shirt.texture?/normal_a.tex](asnormalmap).pc_tex",
+			"type": "AsNormalMap"
+		},
+		"mapTexture2D_03": {
+			"enabled": true,
+			"value": "[assembly:/_pro/characters/assets/civilians/formal_01/textures/male_reg_civ_photographer_03_shirt.texture?/specular_a.tex](ascolormap).pc_tex",
+			"type": "AsColorMap"
+		},
+		"mapTexture2D_01": {
+			"enabled": true,
+			"value": "[assembly:/_pro/characters/assets/civilians/formal_01/textures/male_reg_civ_photographer_03_shirt.texture?/diffuse_a.tex](ascolormap).pc_tex",
+			"type": "AsColorMap"
+		},
+		"Diffuse_Color_01_Value": { "enabled": true, "value": "#ffffff" }
+	}
+}

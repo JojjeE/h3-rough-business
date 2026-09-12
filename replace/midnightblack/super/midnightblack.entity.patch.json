@@ -1,0 +1,21 @@
+{
+	"factory": "[assembly:/_pro/scenes/bricks/globaldata.brick].pc_entitytype",
+	"blueprint": "[assembly:/_pro/scenes/bricks/globaldata.brick].pc_entityblueprint",
+	"patch": [
+		{ "PatchEntity": ["e841aa25af6219ed", { "SetFactory": "0025A2F92318B750" }] },
+		{ "PatchEntity": ["e841aa25af6219ed", { "SetBlueprint": "00C655A5738F16F1" }] },
+		{
+			"PatchEntity": [
+				"342341822acc1080",
+				{
+					"PatchPropertyValue": [
+						"m_eOutfitAICategory",
+						{ "Set": { "type": "EOutfitAICategory", "value": "OAC_47COLORADO" } },
+						false
+					]
+				}
+			]
+		}
+	],
+	"patchVersion": 7
+}

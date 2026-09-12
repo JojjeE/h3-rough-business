@@ -1,0 +1,11 @@
+{
+	"id": "009B6C546441053B",
+	"type": "PRIM",
+	"references": [
+		"[assembly:/_pro/characters/assets/hero/agent47/geometry/agent47_s3_head.wl2?/bones.weightedprim](bodypart).pc_bonerig",
+		{
+			"resource": "[assembly:/_pro/characters/assets/individuals/paris/elusive_target_kamikaze_m/materials/male_reg_kamikaze_jacket_01.mi].pc_mi",
+			"type": "normal"
+		}
+	]
+}

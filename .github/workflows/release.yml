@@ -53,16 +53,9 @@ jobs:
 
             - name: Get new version
               id: newVersion
-              run: npx --yes semantic-release --branches main --dry-run
+              run: npx --yes semantic-release@22 --branches main --dry-run
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-            - name: Get latest framework version
-              id: latestFramework
-              uses: pozetroninc/github-action-get-latest-release@v0.7.0
-              with:
-                  repository: atampy25/simple-mod-framework
-                  token: ${{ secrets.GITHUB_TOKEN }}
 
             - name: Update manifest.json version
               if: ${{ steps.newVersion.outputs.new-release-version }}
@@ -71,22 +64,6 @@ jobs:
                   file: "manifest.json"
                   field: "version"
                   value: ${{ steps.newVersion.outputs.new-release-version }}
-
-            - name: Update manifest.json frameworkVersion
-              if: ${{ steps.newVersion.outputs.new-release-version }}
-              uses: jossef/action-set-json-field@v2
-              with:
-                  file: "manifest.json"
-                  field: "frameworkVersion"
-                  value: ${{ steps.latestFramework.outputs.release }}
-
-            - name: Update manifest.json updateCheck
-              if: ${{ steps.newVersion.outputs.new-release-version }}
-              uses: jossef/action-set-json-field@v2
-              with:
-                  file: "manifest.json"
-                  field: "updateCheck"
-                  value: ${{ format('https://github.com/{0}/releases/latest/download/updates.json', github.repository) }}
 
             - name: Get mod ID
               if: ${{ steps.newVersion.outputs.new-release-version }}
@@ -145,9 +122,7 @@ jobs:
 
             - name: Format
               if: ${{ steps.newVersion.outputs.new-release-version }}
-              uses: actionsx/prettier@v2
-              with:
-                  args: --write .
+              run: npx prettier --write .
 
             - name: Commit changes
               if: ${{ steps.newVersion.outputs.new-release-version }}

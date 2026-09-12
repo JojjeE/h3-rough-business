@@ -1,0 +1,11 @@
+{
+	"id": "00360B38A51ACD36",
+	"type": "PRIM",
+	"references": [
+		"[assembly:/_pro/characters/assets/hero/agent47/geometry/agent47_s3_head.wl2?/bones.weightedprim](bodypart).pc_bonerig",
+		{
+			"resource": "[assembly:/_pro/characters/assets/civilians/formal_01/materials/male_reg_civ_photographer_03_shirt.mi].pc_mi",
+			"type": "normal"
+		}
+	]
+}
