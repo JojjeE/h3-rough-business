@@ -9,60 +9,6 @@
 	"url": "https://github.com/JojjeE/h3-rough-business",
 	"conditions": { "supportedGames": ["h3"] },
 	"data": { "contentFolders": ["base"] },
-	"presets": [
-		{
-			"name": "Black jacket",
-			"description": "Default black jacket.",
-			"id": "rb-preset-jacket-black",
-			"values": {
-				"rb-jacket-color": "#2b2b2b"
-			}
-		},
-		{
-			"name": "Brown jacket",
-			"description": "Light brown jacket.",
-			"id": "rb-preset-jacket-brown",
-			"values": {
-				"rb-jacket-color": "#564435"
-			}
-		},
-		{
-			"name": "Gray slacks",
-			"description": "Light gray dress slacks.",
-			"id": "rb-preset-pants-slacks-gray",
-			"values": {
-				"rb-pants-type": "rb-pants-type-slacks",
-				"rb-pants-color": "#6e6e6e"
-			}
-		},
-		{
-			"name": "Black slacks",
-			"description": "Black dress slacks.",
-			"id": "rb-preset-pants-slacks-black",
-			"values": {
-				"rb-pants-type": "rb-pants-type-slacks",
-				"rb-pants-color": "#2a2a2a"
-			}
-		},
-		{
-			"name": "Blue jeans",
-			"description": "Blue jeans.",
-			"id": "rb-preset-pants-jeans-blue",
-			"values": {
-				"rb-pants-type": "rb-pants-type-jeans",
-				"rb-pants-color": "#3e4962"
-			}
-		},
-		{
-			"name": "Black jeans",
-			"description": "Black jeans.",
-			"id": "rb-preset-pants-jeans-black",
-			"values": {
-				"rb-pants-type": "rb-pants-type-jeans",
-				"rb-pants-color": "#2a2a2a"
-			}
-		}
-	],
 	"options": [
 		{
 			"id": "rb-install",
@@ -121,7 +67,7 @@
 				{
 					"id": "rb-install-peacock",
 					"name": "Peacock Addon (Unlocked)",
-					"description": "Install the suit to your game as an addon without replacing existing suits. Unlocked from the start, you won't need to complete a challenge to use it. This will only work if you're playing with Peacock.",
+					"description": "Install the suit to your game as an addon without replacing existing suits. Unlocked from the start, you won't need to complete a challenge to use it. This will only work if you're playing with Peacock, or offline.",
 					"data": {
 						"contentFolders": ["replace/addon", "replace/addon_nochallenge"],
 						"blobFolders": ["blobs/addon"],
@@ -287,6 +233,24 @@
 					"defaultValue": "#2b2b2b",
 					"description": "Change color of leather jacket."
 				}
+			],
+			"presets": [
+				{
+					"name": "Black jacket",
+					"description": "Default black jacket.",
+					"id": "rb-preset-jacket-black",
+					"values": {
+						"rb-jacket-color": "#2b2b2b"
+					}
+				},
+				{
+					"name": "Brown jacket",
+					"description": "Light brown jacket.",
+					"id": "rb-preset-jacket-brown",
+					"values": {
+						"rb-jacket-color": "#564435"
+					}
+				}
 			]
 		},
 		{
@@ -324,6 +288,44 @@
 					"description": "Change pants color.",
 					"type": "color",
 					"defaultValue": "#6e6e6e"
+				}
+			],
+			"presets": [
+				{
+					"name": "Gray slacks",
+					"description": "Light gray dress slacks.",
+					"id": "rb-preset-pants-slacks-gray",
+					"values": {
+						"rb-pants-type": "rb-pants-type-slacks",
+						"rb-pants-color": "#6e6e6e"
+					}
+				},
+				{
+					"name": "Black slacks",
+					"description": "Black dress slacks.",
+					"id": "rb-preset-pants-slacks-black",
+					"values": {
+						"rb-pants-type": "rb-pants-type-slacks",
+						"rb-pants-color": "#2a2a2a"
+					}
+				},
+				{
+					"name": "Blue jeans",
+					"description": "Blue jeans.",
+					"id": "rb-preset-pants-jeans-blue",
+					"values": {
+						"rb-pants-type": "rb-pants-type-jeans",
+						"rb-pants-color": "#3e4962"
+					}
+				},
+				{
+					"name": "Black jeans",
+					"description": "Black jeans.",
+					"id": "rb-preset-pants-jeans-black",
+					"values": {
+						"rb-pants-type": "rb-pants-type-jeans",
+						"rb-pants-color": "#2a2a2a"
+					}
 				}
 			]
 		},
