@@ -11,22 +11,21 @@ on:
 jobs:
     build:
         runs-on: ubuntu-latest
-        if: "!startsWith(github.ref, 'refs/tags/')"
+        if: "!startsWith(github.ref, 'refs/tags/') && github.repository != 'hitman-rs/smf-mod'"
 
         steps:
-            - uses: actions/checkout@v2
+            - uses: actions/checkout@v7
               with:
                   ref: "main"
                   fetch-depth: 0
 
             - name: Set up Node.js
-              uses: actions/setup-node@v3
+              uses: actions/setup-node@v7
               with:
-                  node-version: 20
+                  node-version: 24
 
             - name: Install dependencies
-              run: |
-                  npm install
+              run: npm install @biomejs/biome@2.5.14 conventional-changelog-conventionalcommits@^6.1.0 semantic-release-export-data@^1.0.1
 
             - name: Create .releaserc
               env:
@@ -57,6 +56,17 @@ jobs:
               env:
                   GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+            - name: Get latest framework version
+              id: latestFramework
+              uses: pozetroninc/github-action-get-latest-release@v0.7.0
+              with:
+                  repository: hitman-rs/simple-mod-framework
+                  token: ${{ secrets.GITHUB_TOKEN }}
+            
+            - name: Set up 7-Zip
+              if: ${{ steps.newVersion.outputs.new-release-version }}
+              uses: milliewalky/setup-7-zip@ce4c26956d369e4cce6c1a7c114a4ed6c98f458f
+
             - name: Update manifest.json version
               if: ${{ steps.newVersion.outputs.new-release-version }}
               uses: jossef/action-set-json-field@v2
@@ -64,6 +74,22 @@ jobs:
                   file: "manifest.json"
                   field: "version"
                   value: ${{ steps.newVersion.outputs.new-release-version }}
+
+            - name: Update manifest.json frameworkVersion
+              if: ${{ steps.newVersion.outputs.new-release-version }}
+              uses: jossef/action-set-json-field@v2
+              with:
+                  file: "manifest.json"
+                  field: "frameworkVersion"
+                  value: ${{ steps.latestFramework.outputs.release }}
+
+            - name: Update manifest.json url
+              if: ${{ steps.newVersion.outputs.new-release-version }}
+              uses: jossef/action-set-json-field@v2
+              with:
+                  file: "manifest.json"
+                  field: "url"
+                  value: ${{ format('https://github.com/{0}', github.repository) }}
 
             - name: Get mod ID
               if: ${{ steps.newVersion.outputs.new-release-version }}
@@ -113,8 +139,6 @@ jobs:
                       # ${{ steps.modName.outputs.prop }}
                       ${{ steps.modDesc.outputs.prop }}
 
-                      [Install](https://hitman-resources.netlify.app/smf-install-link/${{ format('https://github.com/{0}/releases/latest/download/mod.framework.zip', github.repository) }}) | [Download](${{ format('https://github.com/{0}/releases/latest/download/mod.framework.zip', github.repository) }})
-
                       ---
 
                       `${{ steps.modID.outputs.prop }}` v${{ steps.newVersion.outputs.new-release-version }}, by ${{ join(fromJSON(steps.modAuthors.outputs.prop), ', ') }}. This README was automatically generated from the mod's manifest.
@@ -122,7 +146,14 @@ jobs:
 
             - name: Format
               if: ${{ steps.newVersion.outputs.new-release-version }}
-              run: npx prettier --write .
+              run: npx @biomejs/biome format --write
+
+            - name: Remove unnecessary files
+              if: ${{ steps.newVersion.outputs.new-release-version }}
+              continue-on-error: true
+              run: |
+                  rm -r .releaserc node_modules package.json package-lock.json
+                  git restore package.json package-lock.json
 
             - name: Commit changes
               if: ${{ steps.newVersion.outputs.new-release-version }}
@@ -143,29 +174,8 @@ jobs:
 
             - name: Copy files
               if: ${{ steps.newVersion.outputs.new-release-version }}
-              env:
-                  TARGETDIR: ${{ steps.modID.outputs.prop }}
               run: |
-                  mkdir $TARGETDIR
-                  for file in *;do test "$file" != "$TARGETDIR" && cp -r "$file" "$TARGETDIR/";done
-                  rm -rf "$TARGETDIR/node_modules"
-                  rm "$TARGETDIR/package.json" "$TARGETDIR/package-lock.json" "$TARGETDIR/pnpm-lock.yaml" "$TARGETDIR/README.md"
-
-            - name: Create ZIP
-              if: ${{ steps.newVersion.outputs.new-release-version }}
-              uses: TheDoctor0/zip-release@4fb9e4ff72847dd3d1c111cf63834e353ed7cb3d
-              with:
-                  filename: mod.framework.zip
-                  path: ${{ steps.modID.outputs.prop }}
-
-            - name: Create updates.json
-              if: ${{ steps.newVersion.outputs.new-release-version }}
-              env:
-                  VERSION: ${{ toJSON(steps.newVersion.outputs.new-release-version) }}
-                  CHANGELOG: ${{ toJSON(steps.changelog.outputs.changes) }}
-                  URL: ${{ format('https://github.com/{0}/releases/latest/download/mod.framework.zip', github.repository) }}
-              run: |
-                  echo "{\"version\":$VERSION,\"changelog\":$CHANGELOG,\"url\":\"$URL\"}" > updates.json
+                  7z a -r mod.framework.zip * -xr@.modignore "-x!.modignore" "-x!.git" "-x!.github" "-x!.gitattributes" "-x!.gitignore"
 
             - name: Release
               if: ${{ steps.newVersion.outputs.new-release-version }}
@@ -177,4 +187,23 @@ jobs:
                   repository: ${{ github.repository }}
                   files: |
                       mod.framework.zip
-                      updates.json
+
+            - name: Upload to Nexus
+              env:
+                  NEXUS_API_KEY: ${{ secrets.NEXUS_API_KEY }}
+                  NEXUS_MOD_ID: ${{ vars.NEXUS_MOD_ID }}
+                  NEXUS_FILE_ID: ${{ vars.NEXUS_FILE_ID }}
+              if: ${{ steps.newVersion.outputs.new-release-version && env.NEXUS_API_KEY != '' && env.NEXUS_MOD_ID != '' && env.NEXUS_FILE_ID != '' }}
+              uses: Nexus-Mods/upload-action@98532f7670c27cbecc78fae03fa3e278147827e2
+              with:
+                  api_key: ${{ secrets.NEXUS_API_KEY }}
+                  file_id: ${{ vars.NEXUS_FILE_ID }}
+                  filename: mod.framework.zip
+                  version: ${{ steps.newVersion.outputs.new-release-version }}
+                  display_name: ${{ steps.modName.outputs.prop }}
+                  description: "Install with the Simple Mod Framework."
+                  update_mod_version: true
+                  mod_id: ${{ vars.NEXUS_MOD_ID }}
+                  changelog: ${{ steps.changelog.outputs.changes }}
+                  archive_existing_version: ${{ vars.NEXUS_ARCHIVE_EXISTING_VERSION }}
+                  show_requirements_pop_up: ${{ vars.NEXUS_SHOW_REQUIREMENTS_POPUP }}

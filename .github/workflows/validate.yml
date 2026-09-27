@@ -1,0 +1,32 @@
+name: Validate
+
+on: push
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+        if: "github.repository != 'hitman-rs/smf-mod'"
+
+        steps:
+            - uses: actions/checkout@v7
+
+            - name: Set up Node.js
+              uses: actions/setup-node@v7
+              with:
+                  node-version: 24
+
+            - name: Install apt dependencies (Linux)
+              uses: awalsh128/cache-apt-pkgs-action@acb598e5ddbc6f68a970c5da0688d2f3a9f04d05
+              with:
+                  packages: libwebkit2gtk-4.1-dev
+                  version: 1
+                  execute_install_scripts: true
+
+            - name: Install dependencies
+              run: |
+                  cd .github
+                  curl -L -o smf.zip https://github.com/hitman-rs/simple-mod-framework/releases/latest/download/Linux.zip
+                  unzip smf.zip
+
+            - name: Validate mod
+              run: node .github/validate.mjs

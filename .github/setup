@@ -1,0 +1,32 @@
+#!/bin/sh
+set -eu
+
+# QuickEntity merge driver
+echo "Setting up QuickEntity merge driver..."
+git config merge.qn.name QuickEntity
+git config merge.qn.driver '.github/qn-git-merge %O %A %B'
+
+# Format pre-commit hook
+echo "Setting up pre-commit hook for Biome formatting..."
+if command -v curl >/dev/null 2>&1; then
+    curl -sSL -o .github/biome https://github.com/biomejs/biome/releases/download/@biomejs/biome@2.5.14/biome-linux-x64
+elif command -v wget >/dev/null 2>&1; then
+    wget -q -O .github/biome https://github.com/biomejs/biome/releases/download/@biomejs/biome@2.5.14/biome-linux-x64
+else
+    echo "Error: This script requires curl or wget to run." >&2
+    exit 1
+fi
+chmod +x .github/biome
+if [ ! -d .git/hooks ]; then
+    mkdir -p .git/hooks
+fi
+if [ -f .git/hooks/pre-commit ]; then
+    rm .git/hooks/pre-commit
+fi
+echo '#!/bin/sh' > .git/hooks/pre-commit
+echo 'set -eu' >> .git/hooks/pre-commit
+echo './.github/biome format --write --config-path .github/biome.json' >> .git/hooks/pre-commit
+echo 'git update-index --again' >> .git/hooks/pre-commit
+chmod +x .git/hooks/pre-commit
+
+echo "Done!"

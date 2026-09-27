@@ -1,9 +1,122 @@
-# The Rough Business Suit
+# Simple Mod Framework mod template
 
-Black leather jacket outfit, for the stylish, rough and tumble assassin. Install it for Peacock or replace a casual suit of your choice.
+The preferred template for Simple Mod Framework mods.
 
-[Install](https://hitman-resources.netlify.app/smf-install-link/https://github.com/JojjeE/h3-rough-business/releases/latest/download/mod.framework.zip) | [Download](https://github.com/JojjeE/h3-rough-business/releases/latest/download/mod.framework.zip)
+## Why should I use this?
 
----
+-   Changelog support
+    -   The mod template automatically generates changelogs for each version, and SMF displays these to users, showing all changes since the user last updated your mod
+-   Automatic versioning
+    -   Versions of the mod are automatically zipped and releases are automatically made
+    -   Conventional commits mean that you don't have to do anything; any change you make to your mod can automatically be converted into a release with the versions all handled for you
+        -   This also means that your versions are fully compatible with Semantic Versioning, which improves the framework's ability to know how your mod has changed
+    -   Your mod's manifest will be edited for you; you don't have to set anything up yourself
+-   Automatic Nexus Mods upload
+    -   If you have Nexus Mods Premium, you can supply an API key to automatically publish new versions of the mod to Nexus alongside each GitHub release, including updating the changelog
+-   Automatic formatting
+    -   Biome is run before each commit, and a pre-made configuration for it is included
+-   Better entity handling for Git
+    -   The template includes a custom Git merge driver for QuickEntity files that reduces merge conflicts when entity.json files are changed at the same time
+-   LGPLv3 license
+    -   Mods created with this template are permissively licensed; anyone can alter your mod, but they have to give credit and provide a list of what they have changed
+-   Automatic updating of `frameworkVersion`
+    -   Most mod developers don't bother updating this property; the template automatically brings it in line with the version your mod is actually being tested against
+-   Automatic README generation
+    -   The template will update the README for the repository automatically with each new release
+    -   If you want to write your own, just modify it yourself and the template won't touch it
 
-`Jojje.RoughBusinessSuit` v1.4.1, by Jojje. This README was automatically generated from the mod's manifest.
+### The benefits of Git/GitHub
+
+If you're new to Git and GitHub, you might also want to know why they're recommended. To answer that, think to yourself whether you've ever accidentally modified a file irreversibly and not been able to get back the old version; alternatively, think to yourself whether you've ever wanted to keep certain sets of changes for later while working on something else, or whether you've ever wanted to have a history of your changes to see how you did something a while ago. Git does all of that.
+
+GitHub is a place for hosting Git repositories, which lets you more easily see branches, track issues and collaborate with other people.
+
+## How do I use this?
+
+### Requirements
+
+You'll need Git, obviously, and preferably also a GUI client if you aren't experienced with Git's command line interface. GitHub Desktop is recommended, but VS Code includes its own as well (though it can be unintuitive at times and functions more as a list of Git commands than as an easy-to-use interface).
+
+### Cloning the template
+
+To get started, click the green "Use this template" button on GitHub and create a new repository. Give it whatever name you like and make it public or private (if you want to make it private, then make sure to change it back to public when the mod is released, else there's no point in this template). You can then clone the repository directly into your Mods folder (so the repository gets its own folder under Mods where you can work) - make sure to rename the created folder according to the correct mod ID.
+
+Once you've done that, go to the new folder in your Mods folder and run the command `.github/setup` to set up automatic formatting and the custom Git merger.
+
+### Making a new mod
+
+First, edit `manifest.json` to use the correct mod ID and create a commit along the lines of `feat: initial mod`. From then, you can work on your mod and make whatever commits you like (per the following section).
+
+An important note: the version for the mod starts at `0.1.0`, which means the mod is in development - you can make as many changes as you like at `0.x.x`. When you finalise the mod for its first release, add an exclamation mark before the `:` (like `feat!: final feature`) and the version will automatically be bumped to `1.0.0`.
+
+Don't worry about updating your manifest's version or `url` property; the template will configure all that for you. A tip for mod releases - whenever you want to push an update to Nexus, you can just download the `mod.framework.zip` file on the GitHub release generated by the template and upload it to Nexus, which saves having to do it yourself.
+
+### Transferring an existing mod
+
+If you're looking to integrate this into an existing mod you have, copy everything from that mod over to this template, create a commit named something like `chore: transfer existing mod` and then tag that commit with the currently released version of the mod (the initial commit will still automatically be tagged 0.1.0, which is fine). For example, a mod which is currently at 1.1.0 would be copied over, a commit containing the current mod version would be created under whatever name, and that commit would be tagged `1.1.0`.
+
+Don't worry about updating your manifest's version or `url` property; the template will configure all that for you.
+
+### How to make commits
+
+This template will do everything for you, including versioning, generating changelogs and creating mod ZIPs; just make sure you follow [conventional commits](https://www.conventionalcommits.org/en/v1.0.0).
+
+As a rule of thumb, anything that doesn't drastically alter the mod or make sweeping changes that could break other mods should be either an `enhancement` (for improvements to existing parts of the mod), `feat` (for new parts of the mod) or `fix` (for bugfixes). You can specify the part of the mod you're changing in parentheses like so: `fix(localisation): typo in French text`.
+
+If you do drastically alter the mod or make sweeping changes that could break other mods, add an exclamation mark just before the `:`, and write `BREAKING CHANGE: This thing is now this thing, which means this.` in the "description" or "footer" of the commit.
+
+### How to not make a release for every change
+
+If you want to have multiple new features in a release, just make conventional commits in a new branch and then merge them into the main branch once you want to release. When the branch is merged, the template will detect all the new commits and adjust the changelog/version appropriately.
+
+### How to not use conventional commits for making lots of small changes
+
+If you're making a lot of trivial changes that you'd ordinarily call names like `whatever` or `fix that thing from before`, you should be working in a feature branch. In a branch you can make as many commits as you like to work on a specific feature under whatever name, and then use the GitHub "squash and merge" feature to combine them all into one `feat: name of new feature` commit.
+
+To combine this advice with the last, you can work like this:
+
+-   create a `next-release` branch
+-   create a `new-feature-1` branch
+-   make whatever commits you like on `new-feature-1`: "do half the work", "whoops, fix that"
+-   squash and merge `new-feature-1` onto `next-release` under the commit `feat: new feature 1`
+-   create an `improvement-whatever` branch
+-   make whatever commits you like on `improvement-whatever`: "improve that part", "finish it off"
+-   squash and merge `improvement-whatever` onto `next-release` under the commit `enhancement: some improvement`
+-   standard merge `next-release` onto `main`
+
+The result of this would be a changelog like this:
+
+-   New Features
+    -   new feature 1
+-   Improvements
+    -   some improvement
+
+### Miscellaneous features
+
+#### Nexus Mods upload
+
+If you have Nexus Mods Premium, you can supply an API key to the template as a GitHub Actions secret to enable it to automatically update your mod on Nexus.
+
+First, acquire your personal API key from the [Nexus Mods settings page](https://www.nexusmods.com/settings/api-keys). Then, add a repository secret under "Actions secrets and variables" (`https://github.com/<your-repo>/settings/secrets/actions`) with the name `NEXUS_API_KEY` and paste your API key.
+
+To configure which mod and file to upload to, go to the Variables section and add two repository variables `NEXUS_MOD_ID` and `NEXUS_FILE_ID`, containing the unique mod ID and file ID respectively. You can find these values in the Advanced section of the Files tab:
+
+![Nexus Mods Advanced link](https://github.com/Nexus-Mods/upload-action/blob/main/docs/images/modpage.png?raw=true)
+
+That's it! A new version of the file will automatically be uploaded whenever a GitHub release is created.
+
+You can configure this further with the following variables:
+- `NEXUS_ARCHIVE_EXISTING_VERSION`: set to `true` to automatically archive older versions of the mod (disabled by default)
+- `NEXUS_SHOW_REQUIREMENTS_POPUP`: set to `true` to show users the requirements popup before downloading the mod from the Nexus Mods website (disabled by default)
+
+#### Excluding files from the mod ZIP
+
+The `.modignore` file in the root of the mod can be used to exclude files from the final ZIP that users download. For example, you could add a `*.psd` entry to exclude all Photoshop source files, reducing the mod's filesize.
+
+#### Formatter
+
+The initial setup command installs a pre-commit hook that runs the Biome formatter. The configuration for this is located in the `.github` folder - you can customise it as you wish.
+
+#### Updating the template
+
+If the template has received updates that you want to incorporate into your mod repository, just delete and replace the `.github` folder - it contains everything to do with the template.
