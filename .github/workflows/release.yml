@@ -205,5 +205,5 @@ jobs:
                   update_mod_version: true
                   mod_id: ${{ vars.NEXUS_MOD_ID }}
                   changelog: ${{ steps.changelog.outputs.changes }}
-                  archive_existing_version: ${{ vars.NEXUS_ARCHIVE_EXISTING_VERSION }}
-                  show_requirements_pop_up: ${{ vars.NEXUS_SHOW_REQUIREMENTS_POPUP }}
+                  archive_existing_version: ${{ vars.NEXUS_ARCHIVE_EXISTING_VERSION || false }}
+                  show_requirements_pop_up: ${{ vars.NEXUS_SHOW_REQUIREMENTS_POPUP || false }}

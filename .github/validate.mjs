@@ -13,5 +13,6 @@ if (output.result === "pass") {
 } else {
 	console.log("Validation failed")
 	console.error(output.message)
+	console.log(`::error title=Validation error::${output.message}`)
 	process.exit(1)
 }
