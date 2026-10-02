@@ -96,7 +96,7 @@
 					}
 				},
 				{
-					"id": "rb-install-casual",
+					"id": "rb-install-bangkok",
 					"name": "Casual Suit with Gloves",
 					"data": {
 						"contentFolders": ["replace/bangkok"],
@@ -104,7 +104,7 @@
 					}
 				},
 				{
-					"id": "rb-install-italian",
+					"id": "rb-install-sapienza",
 					"name": "Italian Suit with Gloves",
 					"data": {
 						"contentFolders": ["replace/sapienza"],
@@ -112,7 +112,7 @@
 					}
 				},
 				{
-					"id": "rb-install-floridafit",
+					"id": "rb-install-miami",
 					"name": "Florida Fit with Gloves",
 					"data": {
 						"contentFolders": ["replace/miami"],
@@ -120,7 +120,7 @@
 					}
 				},
 				{
-					"id": "rb-install-casualtourist",
+					"id": "rb-install-sanfortuna",
 					"name": "Casual Tourist with Gloves",
 					"data": {
 						"contentFolders": ["replace/sanfortuna"],
@@ -136,7 +136,7 @@
 					}
 				},
 				{
-					"id": "rb-install-sightseeing",
+					"id": "rb-install-summersightseeing",
 					"name": "Summer Sightseeing Suit",
 					"data": {
 						"contentFolders": ["replace/summersightseeing"],
@@ -144,7 +144,7 @@
 					}
 				},
 				{
-					"id": "rb-install-undercover",
+					"id": "rb-install-casualundercover",
 					"name": "Casual Undercover",
 					"data": {
 						"contentFolders": ["replace/casualundercover"],
@@ -160,7 +160,7 @@
 					}
 				},
 				{
-					"id": "rb-install-summersuit",
+					"id": "rb-install-marrakesh",
 					"name": "Summer Suit with Gloves",
 					"data": {
 						"contentFolders": ["replace/marrakesh"],
@@ -168,7 +168,7 @@
 					}
 				},
 				{
-					"id": "rb-install-tropical",
+					"id": "rb-install-tropicalsuit",
 					"name": "Tropical Suit",
 					"data": {
 						"contentFolders": ["replace/tropicalsuit"],
@@ -192,7 +192,7 @@
 					}
 				},
 				{
-					"id": "rb-install-ducky",
+					"id": "rb-install-luckyducky",
 					"name": "Lucky Ducky",
 					"data": {
 						"contentFolders": ["replace/luckyducky"],
