@@ -62,7 +62,26 @@ jobs:
               with:
                   repository: hitman-rs/simple-mod-framework
                   token: ${{ secrets.GITHUB_TOKEN }}
-            
+
+            - name: Install apt dependencies (Linux)
+              if: ${{ steps.newVersion.outputs.new-release-version }}
+              uses: awalsh128/cache-apt-pkgs-action@acb598e5ddbc6f68a970c5da0688d2f3a9f04d05
+              with:
+                  packages: libwebkit2gtk-4.1-dev
+                  version: 1
+                  execute_install_scripts: true
+
+            - name: Install dependencies
+              if: ${{ steps.newVersion.outputs.new-release-version }}
+              run: |
+                  cd .github
+                  curl -L -o smf.zip https://github.com/hitman-rs/simple-mod-framework/releases/latest/download/Linux.zip
+                  unzip smf.zip
+
+            - name: Validate mod
+              if: ${{ steps.newVersion.outputs.new-release-version }}
+              run: node .github/validate.mjs
+
             - name: Set up 7-Zip
               if: ${{ steps.newVersion.outputs.new-release-version }}
               uses: milliewalky/setup-7-zip@ce4c26956d369e4cce6c1a7c114a4ed6c98f458f
@@ -175,18 +194,18 @@ jobs:
             - name: Copy files
               if: ${{ steps.newVersion.outputs.new-release-version }}
               run: |
-                  7z a -r mod.framework.zip * -xr@.modignore "-x!.modignore" "-x!.git" "-x!.github" "-x!.gitattributes" "-x!.gitignore"
+                  7z a -r mod.framework.${{ vars.USE_7Z == 'true' && '7z' || 'zip' }} * -xr@.modignore "-x!.modignore" "-x!.git" "-x!.github" "-x!.gitattributes" "-x!.gitignore"
 
             - name: Release
               if: ${{ steps.newVersion.outputs.new-release-version }}
               uses: softprops/action-gh-release@v1
               with:
                   name: ${{ steps.newVersion.outputs.new-release-version }}
-                  body: "[Install](https://hitman-resources.netlify.app/smf-install-link/${{ format('https://github.com/{0}/releases/download/{1}/mod.framework.zip', github.repository, steps.newVersion.outputs.new-release-version) }}) | [Download](${{ format('https://github.com/{0}/releases/download/{1}/mod.framework.zip', github.repository, steps.newVersion.outputs.new-release-version) }})\n\n${{ steps.changelog.outputs.changes }}"
+                  body: "[Install](https://hitman-resources.netlify.app/smf-install-link/${{ format('https://github.com/{0}/releases/download/{1}/mod.framework.{2}', github.repository, steps.newVersion.outputs.new-release-version, vars.USE_7Z == 'true' && '7z' || 'zip') }}) | [Download](${{ format('https://github.com/{0}/releases/download/{1}/mod.framework.{2}', github.repository, steps.newVersion.outputs.new-release-version, vars.USE_7Z == 'true' && '7z' || 'zip') }})\n\n${{ steps.changelog.outputs.changes }}"
                   tag_name: ${{ steps.newVersion.outputs.new-release-version }}
                   repository: ${{ github.repository }}
                   files: |
-                      mod.framework.zip
+                      mod.framework.${{ vars.USE_7Z == 'true' && '7z' || 'zip' }}
 
             - name: Upload to Nexus
               env:
@@ -198,7 +217,7 @@ jobs:
               with:
                   api_key: ${{ secrets.NEXUS_API_KEY }}
                   file_id: ${{ vars.NEXUS_FILE_ID }}
-                  filename: mod.framework.zip
+                  filename: mod.framework.${{ vars.USE_7Z == 'true' && '7z' || 'zip' }}
                   version: ${{ steps.newVersion.outputs.new-release-version }}
                   display_name: ${{ steps.modName.outputs.prop }}
                   description: "Install with the Simple Mod Framework."
