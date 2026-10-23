@@ -22,6 +22,13 @@ if exist ".git\hooks\pre-commit" del /f /q ".git\hooks\pre-commit"
 if exist ".git\hooks\pre-commit.cmd" del /f /q ".git\hooks\pre-commit.cmd"
 
 (
+	echo #!/bin/sh
+	echo set -eu
+	echo ./.github/biome format --write --config-path .github/biome.json
+	echo git update-index --again
+) > ".git\hooks\pre-commit"
+
+(
 	echo @echo off
 	echo setlocal EnableExtensions
 	echo pushd "%%~dp0..\.."
