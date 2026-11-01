@@ -53,6 +53,16 @@ jobs:
               with:
                   node-version: 24
 
+            - name: Cache Oxipng
+              uses: actions/cache@v6
+              with:
+                  path: ~/.cargo/
+                  key: ${{ runner.os }}-cargo
+
+            - name: Install Oxipng
+              run: |
+                  which oxipng || cargo install oxipng
+
             - name: Install dependencies
               run: npm install @biomejs/biome@2.5.14 conventional-changelog-conventionalcommits@^6.1.0 semantic-release-export-data@^1.0.1
 
@@ -199,9 +209,13 @@ jobs:
               with:
                   token: ${{ secrets.GITHUB_TOKEN }}
                   config_file: .github/tag-changelog-config.js
-                  exclude_types: other,docs,chore,build,amend,refactor
+                  exclude_types: other,docs,chore,build,ci,amend,refactor
 
-            - name: Copy files
+            - name: Optimize PNGs
+              run: |
+                  oxipng -o 5 **/*.png
+
+            - name: Package mod
               if: ${{ steps.newVersion.outputs.new-release-version }}
               run: |
                   7z a -r mod.framework.${{ vars.USE_7Z == 'true' && '7z' || 'zip' }} * -xr@.modignore "-x!.modignore" "-x!.git" "-x!.github" "-x!.gitattributes" "-x!.gitignore"

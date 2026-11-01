@@ -1,0 +1,73 @@
+name: Check for template updates
+
+on:
+    schedule:
+        - cron: "36 10 * * 1"
+
+    workflow_dispatch:
+
+jobs:
+    update:
+        runs-on: ubuntu-latest
+        if: "github.repository != 'hitman-rs/smf-mod'"
+
+        permissions:
+            contents: read
+            issues: write
+
+        steps:
+            - uses: actions/checkout@v7
+
+            - name: Download template
+              shell: bash
+              run: |
+                  set -euo pipefail
+
+                  template_dir="$(mktemp -d)"
+                  trap 'rm -rf "$template_dir"' EXIT
+
+                  git clone \
+                      --depth 1 \
+                      --filter=blob:none \
+                      --sparse \
+                      https://github.com/hitman-rs/smf-mod.git \
+                      "$template_dir"
+                  git -C "$template_dir" sparse-checkout set .github
+
+                  rm -rf .github
+                  mv "$template_dir/.github" .github
+
+            - name: Check for changes
+              id: changes
+              shell: bash
+              run: |
+                  if git status --porcelain -- .github | grep -q .; then
+                      echo "available=true" >> "$GITHUB_OUTPUT"
+                  else
+                      echo "available=false" >> "$GITHUB_OUTPUT"
+                  fi
+
+            - name: Create issue
+              if: steps.changes.outputs.available == 'true'
+              env:
+                  GH_TOKEN: ${{ github.token }}
+              shell: bash
+              run: |
+                  set -euo pipefail
+
+                  open_issues="$(gh issue list \
+                      --state open \
+                      --limit 100 \
+                      --json title \
+                      --jq 'map(select(.title == "Template update available")) | length')"
+
+                  if [ "$open_issues" -eq 0 ]; then
+                      gh issue create \
+                          --title "Template update available" \
+                          --body "$(cat <<'EOF'
+                  A new version of the SMF mod template is available - you can see the changes at the [source repository](https://github.com/hitman-rs/smf-mod).
+
+                  You can update to the latest version by downloading the [newest template](https://github.com/hitman-rs/smf-mod) and replacing the `.github` directory in this repository with the new one. When the changes are committed (e.g. `ci: update template`) and pushed, this issue will be automatically closed.
+                  EOF
+                      )"
+                  fi

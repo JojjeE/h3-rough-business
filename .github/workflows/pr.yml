@@ -24,8 +24,13 @@ jobs:
                       fix
                       feat
                       enhancement
+                      improvement
+                      imp
                       style
                       refactor
+                      l10n
+                      docs
+                      perf
                       build
                       ci
                       chore

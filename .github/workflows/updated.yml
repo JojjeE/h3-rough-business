@@ -1,0 +1,66 @@
+name: Close issue when template updated
+
+on:
+    push:
+        branches:
+            - main
+        paths:
+            - ".github/**"
+
+jobs:
+    update:
+        runs-on: ubuntu-latest
+        if: "github.repository != 'hitman-rs/smf-mod'"
+
+        permissions:
+            contents: read
+            issues: write
+
+        steps:
+            - uses: actions/checkout@v7
+
+            - name: Download template
+              shell: bash
+              run: |
+                  set -euo pipefail
+
+                  template_dir="$(mktemp -d)"
+                  trap 'rm -rf "$template_dir"' EXIT
+
+                  git clone \
+                      --depth 1 \
+                      --filter=blob:none \
+                      --sparse \
+                      https://github.com/hitman-rs/smf-mod.git \
+                      "$template_dir"
+                  git -C "$template_dir" sparse-checkout set .github
+
+                  rm -rf .github
+                  mv "$template_dir/.github" .github
+
+            - name: Check for changes
+              id: changes
+              shell: bash
+              run: |
+                  if git status --porcelain -- .github | grep -q .; then
+                      echo "available=true" >> "$GITHUB_OUTPUT"
+                  else
+                      echo "available=false" >> "$GITHUB_OUTPUT"
+                  fi
+
+            - name: Close issue
+              if: steps.changes.outputs.available == 'false'
+              env:
+                  GH_TOKEN: ${{ github.token }}
+              shell: bash
+              run: |
+                  set -euo pipefail
+
+                  gh issue list \
+                      --state open \
+                      --limit 100 \
+                      --json number,title \
+                      --jq '.[] | select(.title == "Template update available") | .number' |
+                      while read -r issue; do
+                          gh issue close "$issue"
+                      done

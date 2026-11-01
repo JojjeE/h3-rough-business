@@ -3,7 +3,7 @@ module.exports = {
 		{ types: ["feat", "feature"], label: "New Features" },
 		{ types: ["fix", "bugfix"], label: "Bug Fixes" },
 		{
-			types: ["improvement", "improvements", "enhancement"],
+			types: ["improvement", "improvements", "imp", "enhancement"],
 			label: "Improvements"
 		},
 		{ types: ["perf"], label: "Performance Improvements" },
